@@ -1,894 +1,358 @@
-/**
- * @file main.js
- * Lógica principal del catálogo, filtros, buscador y renderizado.
- */
+import { initCart, setCatalog } from "./core/cart.js";
+import { FEATURED_PER_CATEGORY } from "./core/config.js";
+import { loadProducts } from "./core/data.js";
+import { fuzzySearch, tokenize } from "./core/search.js";
+import {
+  byId,
+  catalogUrl,
+  categoryLabel,
+  debounce,
+  escapeHtml,
+  restartAnimation,
+} from "./core/utils.js";
+import { mountSlots } from "./ui/components.js";
+import { renderProducts } from "./ui/cards.js";
+import { initHero } from "./ui/hero.js";
+import { initShell } from "./ui/shell.js";
 
-import { loadProducts, normalizeText } from "./data.js";
-import { renderProducts } from "./render.js";
-import { initCartUI, setProductsIndex } from "./cart.js";
-import { initSharedUI } from "./ui.js";
+mountSlots();
 
-// ─── Referencias DOM ─────────────────────────────────────────────
-const els = {
-  q: document.getElementById("q"),
-  searchBtn: document.getElementById("searchBtn"),
-  categoryNav: document.getElementById("categoryNav"),
-  resultsCount: document.getElementById("resultsCount"),
-  productsGrid: document.getElementById("productsGrid"),
-  pagination: document.getElementById("pagination"),
-  emptyState: document.getElementById("emptyState"),
-  resultsSection: document.getElementById("resultsSection"),
-  filterCategory: document.getElementById("filterCategory"),
-  filterBrand: document.getElementById("filterBrand"),
-  filterModel: document.getElementById("filterModel"),
-  filterRim: document.getElementById("filterRim"),
-  filterRimGroup: document.getElementById("filterRimGroup"),
-  catalogSidebar: document.getElementById("catalogSidebar"),
-  clearFiltersBtn: document.getElementById("clearFiltersBtn"),
-  emptyReset: document.getElementById("emptyReset"),
-  sortSelect: document.getElementById("sortSelect"),
-  mobileFiltersBtn: document.getElementById("mobileFiltersBtn"),
-  closeFiltersBtn: document.getElementById("closeFiltersBtn"),
-  mobileFiltersOverlay: document.getElementById("mobileFiltersOverlay"),
-  applyFiltersBtn: document.getElementById("applyFiltersBtn"),
-};
+const IDS = [
+  "q",
+  "searchForm",
+  "resultsCount",
+  "fuzzyBanner",
+  "productsGrid",
+  "pagination",
+  "emptyState",
+  "resultsSection",
+  "filterCategory",
+  "filterBrand",
+  "filterModel",
+  "filterRim",
+  "filterRimGroup",
+  "catalogSidebar",
+  "clearFiltersBtn",
+  "emptyReset",
+  "sortSelect",
+  "viewToggle",
+  "mobileFiltersBtn",
+  "closeFiltersBtn",
+  "mobileFiltersOverlay",
+  "applyFiltersBtn",
+];
+const ui = Object.fromEntries(IDS.map((id) => [id, byId(id)]));
 
-// ─── Estado Global ───────────────────────────────────────────────
-let state = {
+const isCatalog = document.body.dataset.page === "catalog";
+const PAGE_SIZE = 16;
+const RENDER_DELAY_MS = 160;
+
+const state = {
   products: [],
   category: "",
-  currentPage: 1,
-  pageSize: 16,
+  brand: "",
+  model: "",
+  rim: "",
   sort: "",
-  filters: { brand: "", model: "", rim: "" },
+  page: 1,
 };
 
-const pageMode = document.body.dataset.page || "home";
-const isHomePage = pageMode === "home";
-const isCatalogPage = pageMode === "catalog";
+const collator = new Intl.Collator("es", { sensitivity: "base" });
+const SORTERS = {
+  "": () => 0,
+  "price-asc": (a, b) => a.price - b.price,
+  "price-desc": (a, b) => b.price - a.price,
+  "name-asc": (a, b) => collator.compare(a.title, b.title),
+  "name-desc": (a, b) => collator.compare(b.title, a.title),
+};
 
-// ─── Helpers de Datos ────────────────────────────────────────────
-function getFeaturedProducts(products) {
-  return [
-    ...products.filter((p) => p.category === "ESPEJOS").slice(0, 2),
-    ...products.filter((p) => p.category === "TAZAS").slice(0, 2),
-    ...products.filter((p) => p.category === "OPTICAS").slice(0, 2),
-    ...products.filter((p) => p.category === "FAROS").slice(0, 2),
-    ...products.filter((p) => p.category === "RADIADORES").slice(0, 1),
-    ...products.filter((p) => p.category === "DEFLECTORES").slice(0, 1),
-  ];
-}
+const sortedUnique = (values) =>
+  [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 
-function formatCategoryLabel(cat) {
-  const map = {
-    ESPEJOS: "Espejos",
-    TAZAS: "Tazas",
-    OPTICAS: "Ópticas",
-    FAROS: "Faros",
-    RADIADORES: "Radiadores",
-    DEFLECTORES: "Deflectores",
-  };
-  return map[cat] || (cat ? cat.charAt(0) + cat.slice(1).toLowerCase() : "");
-}
+const optionsHtml = (placeholder, values, label = (v) => v) =>
+  `<option value="">${placeholder}</option>` +
+  values
+    .map(
+      (v) =>
+        `<option value="${escapeHtml(v)}">${escapeHtml(label(v))}</option>`,
+    )
+    .join("");
 
-function uniqueValues(products, key) {
-  return [...new Set(products.map((p) => p[key]).filter(Boolean))].sort(
-    (a, b) => String(a).localeCompare(String(b), "es"),
-  );
-}
-
-function extractBrands(products) {
-  const brands = new Set();
-  products.forEach((p) => {
-    p.brand.split("-").forEach((b) => {
-      const clean = b.trim();
-      if (clean) brands.add(clean);
-    });
-  });
-  return [...brands].sort((a, b) => a.localeCompare(b, "es"));
-}
-
-function brandMatches(productBrand, filterBrand) {
-  if (!filterBrand) return true;
-  return productBrand
-    .split("-")
-    .map((b) => b.trim())
-    .includes(filterBrand);
-}
-
-function extractModels(products, brand = "", category = "") {
-  const models = new Set();
-  products.forEach((p) => {
-    if (brand && !brandMatches(p.brand, brand)) return;
-    if (category && p.category !== category) return;
-    p.compatibilidadesList?.forEach((m) => models.add(m));
-  });
-  return [...models].sort((a, b) => a.localeCompare(b, "es"));
-}
-
-function goToCatalog({ category = "", q = "" } = {}) {
-  const params = new URLSearchParams();
-  if (category) params.set("cat", category);
-  if (q) params.set("q", q);
-  const queryString = params.toString();
-  window.location.href = `./catalogo.html${queryString ? `?${queryString}` : ""}`;
-}
-
-// ─── Búsqueda Difusa (Fuzzy Search) ──────────────────────────────
-function levenshtein(a, b) {
-  const m = a.length,
-    n = b.length;
-  const dp = Array.from({ length: m + 1 }, (_, i) =>
-    Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0)),
-  );
-  for (let i = 1; i <= m; i++) {
-    for (let j = 1; j <= n; j++) {
-      dp[i][j] =
-        a[i - 1] === b[j - 1]
-          ? dp[i - 1][j - 1]
-          : 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
-    }
-  }
-  return dp[m][n];
-}
-
-function fuzzyScore(product, queryWords) {
-  const tokens = product.searchText.split(/\s+/).filter(Boolean);
-  let totalScore = 0;
-  for (const qw of queryWords) {
-    let best = Infinity;
-    for (const token of tokens) {
-      if (Math.abs(token.length - qw.length) > 4) continue;
-      const d = levenshtein(qw, token);
-      if (d < best) best = d;
-    }
-    totalScore += best === Infinity ? 10 : best;
-  }
-  return totalScore;
-}
-
-// ─── Componentes de UI Específicos ───────────────────────────────
-const revealObserver = new IntersectionObserver(
-  (entries, obs) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      requestAnimationFrame(() => entry.target.classList.add("is-visible"));
-      obs.unobserve(entry.target);
-    });
-  },
-  { rootMargin: "0px 0px -60px 0px", threshold: 0.08 },
-);
-
-function observeRevealItems() {
-  document
-    .querySelectorAll(".reveal-item")
-    .forEach((el) => revealObserver.observe(el));
-}
-
-function initCardTilt(card) {
-  if (window.matchMedia("(pointer: coarse)").matches) return;
-  card.addEventListener("mousemove", (e) => {
-    const rect = card.getBoundingClientRect();
-    const dx = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
-    const dy = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
-    card.style.transform = `translateY(-8px) scale(1.01) rotateX(${(-dy * 5).toFixed(2)}deg) rotateY(${(dx * 5).toFixed(2)}deg)`;
-    card.style.transition = "transform 0.08s linear";
-  });
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "";
-    card.style.transition = "";
-  });
-}
-
-function flyToCart(sourceEl) {
-  const flyItem = document.getElementById("flyItem");
-  const cartIcon = document.querySelector(".cart-trigger__icon");
-  if (!flyItem || !cartIcon) return;
-
-  const srcRect = sourceEl.getBoundingClientRect();
-  const destRect = cartIcon.getBoundingClientRect();
-  const startX = srcRect.left + srcRect.width / 2 - 26;
-  const startY = srcRect.top + srcRect.height / 2 - 26;
-  const endX = destRect.left + destRect.width / 2 - 26;
-  const endY = destRect.top + destRect.height / 2 - 26;
-
-  flyItem.style.left = `${startX}px`;
-  flyItem.style.top = `${startY}px`;
-  flyItem.style.setProperty("--fly-x", `${endX - startX}px`);
-  flyItem.style.setProperty("--fly-y", `${endY - startY}px`);
-
-  const img = sourceEl.closest(".card")?.querySelector(".card__img img");
-  flyItem.innerHTML = img ? `<img src="${img.src}" alt="">` : "";
-  flyItem.classList.remove("is-flying");
-  void flyItem.offsetWidth;
-  flyItem.classList.add("is-flying");
-
-  flyItem.addEventListener(
-    "animationend",
-    () => {
-      flyItem.classList.remove("is-flying");
-      const badge = document.getElementById("cartCount");
-      badge?.classList.remove("bump");
-      void badge?.offsetWidth;
-      badge?.classList.add("bump");
-    },
-    { once: true },
-  );
-}
-
-function initHeroSlider() {
-  const slides = Array.from(document.querySelectorAll(".hero__slide"));
-  const dots = Array.from(document.querySelectorAll(".hero__dot"));
-  const prevBtn = document.getElementById("heroPrev");
-  const nextBtn = document.getElementById("heroNext");
-  const progress = document.getElementById("heroProgress");
-
-  if (!slides.length) return;
-
-  let current = 0;
-  let autoPlayId = null;
-  let progressId = null;
-  let elapsed = 0;
-  const DURATION = 6000;
-
-  function updateSlider(index) {
-    const prev = current;
-    current = (index + slides.length) % slides.length;
-    slides.forEach((slide, i) => {
-      if (i === current) {
-        slide.classList.add("hero__slide--active");
-        slide.style.zIndex = "2";
-        slide.setAttribute("aria-hidden", "false");
-      } else if (i === prev) {
-        slide.classList.remove("hero__slide--active");
-        slide.style.zIndex = "1";
-        slide.setAttribute("aria-hidden", "true");
-        setTimeout(() => (slide.style.zIndex = "0"), 900);
-      } else {
-        slide.classList.remove("hero__slide--active");
-        slide.style.zIndex = "0";
-        slide.setAttribute("aria-hidden", "true");
-      }
-    });
-    dots.forEach((dot, i) => {
-      const active = i === current;
-      dot.classList.toggle("hero__dot--active", active);
-      dot.setAttribute("aria-selected", String(active));
-    });
-    resetProgress();
-  }
-
-  function resetProgress() {
-    elapsed = 0;
-    if (progress) progress.style.width = "0%";
-  }
-
-  function startProgress() {
-    clearInterval(progressId);
-    elapsed = 0;
-    const step = 50;
-    progressId = setInterval(() => {
-      elapsed += step;
-      const pct = Math.min((elapsed / DURATION) * 100, 100);
-      if (progress) progress.style.width = `${pct}%`;
-    }, step);
-  }
-
-  function startAutoPlay() {
-    stopAutoPlay();
-    startProgress();
-    autoPlayId = setInterval(() => {
-      updateSlider(current + 1);
-      startProgress();
-    }, DURATION);
-  }
-
-  function stopAutoPlay() {
-    clearInterval(autoPlayId);
-    clearInterval(progressId);
-    autoPlayId = null;
-    progressId = null;
-  }
-
-  prevBtn?.addEventListener("click", () => {
-    updateSlider(current - 1);
-    startAutoPlay();
-  });
-
-  nextBtn?.addEventListener("click", () => {
-    updateSlider(current + 1);
-    startAutoPlay();
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      updateSlider(i);
-      startAutoPlay();
-    });
-  });
-
-  const heroSection = document.getElementById("heroSection");
-  heroSection?.addEventListener("mouseenter", stopAutoPlay);
-  heroSection?.addEventListener("mouseleave", startAutoPlay);
-
-  document.querySelectorAll(".hero__cta[data-nav-category]").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const category = btn.getAttribute("data-nav-category") || "";
-      if (isHomePage) {
-        goToCatalog({ category });
-        return;
-      }
-      state.category = category;
-      state.currentPage = 1;
-      clearDependentFilters();
-      setActiveNav(state.category);
-      updateModelFilter();
-      updateRimFilterVisibility();
-      apply();
-      scrollToResults();
-    });
-  });
-
-  let touchStartX = 0;
-  heroSection?.addEventListener(
-    "touchstart",
-    (e) => {
-      touchStartX = e.changedTouches[0].clientX;
-    },
-    { passive: true },
+const featuredProducts = (products) =>
+  Object.entries(FEATURED_PER_CATEGORY).flatMap(([category, count]) =>
+    products.filter((p) => p.category === category).slice(0, count),
   );
 
-  heroSection?.addEventListener(
-    "touchend",
-    (e) => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) {
-        diff > 0 ? updateSlider(current + 1) : updateSlider(current - 1);
-        startAutoPlay();
-      }
-    },
-    { passive: true },
+const matches = (words) => (p) =>
+  (!state.category || p.category === state.category) &&
+  words.every((word) => p.searchText.includes(word)) &&
+  (!state.brand || p.brands.includes(state.brand)) &&
+  (!state.rim || p.rim === state.rim) &&
+  (!state.model || p.compat.includes(state.model));
+
+// ─── Filtros ─────────────────────────────────────────────────────
+function fillSelects() {
+  ui.filterCategory.innerHTML = optionsHtml(
+    "Todas las categorías",
+    sortedUnique(state.products.map((p) => p.category)),
+    categoryLabel,
   );
-
-  updateSlider(0);
-  startAutoPlay();
-}
-
-function initViewToggle() {
-  const wrap = document.getElementById("viewToggle");
-  const grid = els.productsGrid;
-  if (!wrap || !grid) return;
-  wrap.addEventListener("click", (e) => {
-    const btn = e.target.closest(".view-toggle__btn");
-    if (!btn) return;
-    const view = btn.dataset.view;
-    wrap.querySelectorAll(".view-toggle__btn").forEach((b) => {
-      b.classList.toggle("view-toggle__btn--active", b.dataset.view === view);
-    });
-    grid.classList.toggle("is-list", view === "list");
-  });
-}
-
-// ─── Gestión de Filtros ──────────────────────────────────────────
-function buildFilters(products) {
-  const categories = uniqueValues(products, "category");
-  const brands = extractBrands(products);
-  const rims = uniqueValues(products, "rim");
-
-  if (els.filterCategory) {
-    els.filterCategory.innerHTML =
-      `<option value="">Todas las categorías</option>` +
-      categories
-        .map((c) => `<option value="${c}">${formatCategoryLabel(c)}</option>`)
-        .join("");
-    els.filterCategory.value = state.category;
-  }
-  if (els.filterBrand) {
-    els.filterBrand.innerHTML =
-      `<option value="">Todas las marcas</option>` +
-      brands.map((b) => `<option value="${b}">${b}</option>`).join("");
-    els.filterBrand.value = state.filters.brand;
-  }
-  if (els.filterRim) {
-    els.filterRim.innerHTML =
-      `<option value="">Todos los rodados</option>` +
-      rims.map((r) => `<option value="${r}">${r}</option>`).join("");
-    els.filterRim.value = state.filters.rim;
-  }
-
-  updateModelFilter();
-  updateRimFilterVisibility();
+  ui.filterBrand.innerHTML = optionsHtml(
+    "Todas las marcas",
+    sortedUnique(state.products.flatMap((p) => p.brands)),
+  );
+  ui.filterRim.innerHTML = optionsHtml(
+    "Todos los rodados",
+    sortedUnique(state.products.map((p) => p.rim)),
+  );
 }
 
 function updateModelFilter() {
-  if (!els.filterModel) return;
-  const { brand } = state.filters;
-  const { category } = state;
+  const hasScope = Boolean(state.brand || state.category);
+  const models = hasScope
+    ? sortedUnique(
+        state.products
+          .filter(
+            (p) =>
+              (!state.brand || p.brands.includes(state.brand)) &&
+              (!state.category || p.category === state.category),
+          )
+          .flatMap((p) => p.compat),
+      )
+    : [];
+  const placeholder = !hasScope
+    ? "Seleccione marca o categoría primero"
+    : models.length
+      ? "Todos los modelos"
+      : "Sin modelos disponibles";
 
-  if (!brand && !category) {
-    els.filterModel.innerHTML = `<option value="">Seleccione marca o categoría primero</option>`;
-    els.filterModel.disabled = true;
-    return;
-  }
-
-  const models = extractModels(state.products, brand, category);
-  if (!models.length) {
-    els.filterModel.innerHTML = `<option value="">Sin modelos disponibles</option>`;
-    els.filterModel.disabled = true;
-    return;
-  }
-
-  els.filterModel.innerHTML =
-    `<option value="">Todos los modelos</option>` +
-    models.map((m) => `<option value="${m}">${m}</option>`).join("");
-  els.filterModel.disabled = false;
-  els.filterModel.value = state.filters.model || "";
+  ui.filterModel.innerHTML = optionsHtml(placeholder, models);
+  ui.filterModel.disabled = !models.length;
+  ui.filterModel.value = state.model;
 }
 
-function updateRimFilterVisibility() {
-  if (!els.filterRimGroup || !els.filterRim) return;
-  const shouldShowRim = state.category === "TAZAS";
-  els.filterRimGroup.hidden = !shouldShowRim;
-  if (!shouldShowRim) {
-    state.filters.rim = "";
-    els.filterRim.value = "";
-  }
-}
+// Refleja `state` en los controles. Es el único punto que escribe valores en el DOM de filtros.
+function syncControls() {
+  const isTazas = state.category === "TAZAS";
+  if (!isTazas) state.rim = "";
+  ui.filterRimGroup.hidden = !isTazas;
 
-function clearSidebarFilters() {
-  state.category = "";
-  state.filters = { brand: "", model: "", rim: "" };
-  state.sort = "";
-  if (els.filterCategory) els.filterCategory.value = "";
-  if (els.filterBrand) els.filterBrand.value = "";
-  if (els.filterRim) els.filterRim.value = "";
-  if (els.sortSelect) els.sortSelect.value = "";
-  if (els.filterModel) {
-    els.filterModel.innerHTML = `<option value="">Seleccione marca o categoría primero</option>`;
-    els.filterModel.disabled = true;
-  }
-  setActiveNav(state.category);
-  updateRimFilterVisibility();
-}
+  ui.filterCategory.value = state.category;
+  ui.filterBrand.value = state.brand;
+  ui.filterRim.value = state.rim;
+  ui.sortSelect.value = state.sort;
+  updateModelFilter();
 
-function clearDependentFilters() {
-  state.filters = { brand: "", model: "", rim: "" };
-  if (els.filterBrand) els.filterBrand.value = "";
-  if (els.filterRim) els.filterRim.value = "";
-  if (els.filterModel) {
-    els.filterModel.innerHTML = `<option value="">Seleccione marca o categoría primero</option>`;
-    els.filterModel.disabled = true;
-  }
-}
-
-function buildCategoryNav(products) {
-  if (!els.categoryNav) return;
-  const categories = [
-    ...new Set(products.map((p) => p.category).filter(Boolean)),
-  ].sort((a, b) => a.localeCompare(b));
-  const items = [
-    `<button class="nav-cat-item" data-nav-category="">
-      <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-      </svg>
-      Todos los productos
-    </button>`,
-  ];
-  for (const cat of categories) {
-    items.push(
-      `<button class="nav-cat-item" data-nav-category="${cat}">${formatCategoryLabel(cat)}</button>`,
-    );
-  }
-  els.categoryNav.innerHTML = items.join("");
-}
-
-function setActiveNav(category) {
-  document.querySelectorAll(".nav__link[data-nav-category]").forEach((a) => {
-    const cat = a.getAttribute("data-nav-category") ?? "";
-    const active = cat === category;
-    a.classList.toggle("is-active", active);
-    a.setAttribute("aria-current", active ? "page" : "false");
+  document.querySelectorAll(".nav__link").forEach((link) => {
+    const active = link.dataset.navCategory === state.category;
+    link.classList.toggle("is-active", active);
+    link.setAttribute("aria-current", active ? "page" : "false");
   });
-  document
-    .querySelectorAll(".nav-cat-item[data-nav-category]")
-    .forEach((btn) => {
-      const cat = btn.getAttribute("data-nav-category") ?? "";
-      btn.classList.toggle("is-active", cat === category);
-    });
-  if (els.filterCategory) els.filterCategory.value = category || "";
 }
 
-// ─── Paginación ──────────────────────────────────────────────────
-function renderPagination(totalItems, currentPage, pageSize) {
-  if (!els.pagination) return;
-  const totalPages = Math.ceil(totalItems / pageSize);
-
-  if (isHomePage || totalPages <= 1) {
-    els.pagination.innerHTML = "";
-    return;
-  }
-
-  const frag = document.createDocumentFragment();
-  const btn = (text, page, active, disabled, delay) => {
-    const b = document.createElement("button");
-    b.className = `pagination__btn${active ? " is-active" : ""}`;
-    b.dataset.page = page;
-    b.textContent = text;
-    b.style.animationDelay = `${delay * 30}ms`;
-    if (disabled) b.disabled = true;
-    if (active) b.setAttribute("aria-current", "page");
-    return b;
-  };
-
-  frag.appendChild(btn("←", currentPage - 1, false, currentPage === 1, 0));
-  for (let i = 1; i <= totalPages; i++) {
-    frag.appendChild(btn(i, i, i === currentPage, false, i));
-  }
-  frag.appendChild(
-    btn(
-      "→",
-      currentPage + 1,
-      false,
-      currentPage === totalPages,
-      totalPages + 1,
-    ),
-  );
-
-  els.pagination.innerHTML = "";
-  els.pagination.appendChild(frag);
+function setCategory(category) {
+  Object.assign(state, { category, brand: "", model: "", rim: "", page: 1 });
+  syncControls();
+  apply();
 }
 
-// ─── Renderizado Principal ───────────────────────────────────────
-function updateCatalogUI({ isHomeView, totalItems }) {
-  const resultsTitle = document.getElementById("resultsTitle");
-  if (resultsTitle) {
-    resultsTitle.textContent = isHomeView
-      ? "Productos destacados"
-      : "Resultados";
-  }
-  if (els.catalogSidebar) els.catalogSidebar.hidden = isHomeView;
-  if (els.resultsSection)
-    els.resultsSection.classList.toggle("catalog--home", isHomeView);
+function clearFilters() {
+  Object.assign(state, {
+    category: "",
+    brand: "",
+    model: "",
+    rim: "",
+    sort: "",
+    page: 1,
+  });
+  syncControls();
+}
 
-  if (els.resultsCount) {
-    if (isHomeView) {
-      els.resultsCount.textContent = "";
-      els.resultsCount.hidden = true;
-    } else {
-      els.resultsCount.textContent = `${totalItems} producto${totalItems === 1 ? "" : "s"}`;
-      els.resultsCount.hidden = false;
-      els.resultsCount.animate(
-        [
-          { opacity: 0, transform: "translateY(6px)" },
-          { opacity: 1, transform: "translateY(0)" },
-        ],
-        {
-          duration: 280,
-          easing: "cubic-bezier(0.16,1,0.3,1)",
-          fill: "forwards",
-        },
-      );
-    }
+function resetAll() {
+  ui.q.value = "";
+  clearFilters();
+  apply();
+}
+
+const toggleSheet = (open) => {
+  ui.catalogSidebar.classList.toggle("is-open", open);
+  ui.mobileFiltersOverlay.classList.toggle("is-open", open);
+  document.body.classList.toggle("no-scroll", open);
+};
+
+// ─── Render ──────────────────────────────────────────────────────
+const pageButton = (text, page, { active = false, disabled = false } = {}) =>
+  `<button class="pagination__btn${active ? " is-active" : ""}" data-page="${page}"${disabled ? " disabled" : ""}${active ? ' aria-current="page"' : ""}>${text}</button>`;
+
+function renderPagination(totalItems) {
+  const pages = Math.ceil(totalItems / PAGE_SIZE);
+  ui.pagination.innerHTML =
+    pages <= 1
+      ? ""
+      : [
+          pageButton("←", state.page - 1, { disabled: state.page === 1 }),
+          ...Array.from({ length: pages }, (_, i) =>
+            pageButton(i + 1, i + 1, { active: i + 1 === state.page }),
+          ),
+          pageButton("→", state.page + 1, { disabled: state.page === pages }),
+        ].join("");
+}
+
+function updateCatalogStatus(total, isSimilar) {
+  ui.resultsCount.textContent = `${total} producto${total === 1 ? "" : "s"}`;
+  restartAnimation(ui.resultsCount, "is-updated");
+  ui.fuzzyBanner.hidden = !isSimilar;
+  if (isSimilar) {
+    ui.fuzzyBanner.textContent = `No encontramos "${ui.q.value.trim()}". Mostrando resultados similares:`;
   }
 }
 
-function sortProducts(products, sort) {
-  const arr = [...products];
-  switch (sort) {
-    case "price-asc":
-      arr.sort((a, b) => (a.price || 0) - (b.price || 0));
-      break;
-    case "price-desc":
-      arr.sort((a, b) => (b.price || 0) - (a.price || 0));
-      break;
-    case "name-asc":
-      arr.sort((a, b) =>
-        String(a.detalle || a.description || "").localeCompare(
-          String(b.detalle || b.description || ""),
-          "es",
-          { sensitivity: "base" },
-        ),
-      );
-      break;
-    case "name-desc":
-      arr.sort((a, b) =>
-        String(b.detalle || b.description || "").localeCompare(
-          String(a.detalle || a.description || ""),
-          "es",
-          { sensitivity: "base" },
-        ),
-      );
-      break;
-  }
-  return arr;
-}
+let renderTimer;
 
 function apply() {
-  const qNorm = normalizeText(els.q?.value ?? "");
-  const isHomeView = isHomePage;
-  const baseProducts = isHomePage
-    ? getFeaturedProducts(state.products)
-    : state.products;
+  const words = isCatalog ? tokenize(ui.q.value) : [];
+  const pool = isCatalog ? state.products : featuredProducts(state.products);
+  const results = pool.filter(matches(words)).sort(SORTERS[state.sort]);
 
-  const filtered = baseProducts.filter((p) => {
-    if (state.category && p.category !== state.category) return false;
-    if (qNorm) {
-      const words = qNorm.split(/\s+/).filter(Boolean);
-      if (!words.every((word) => p.searchText.includes(word))) return false;
-    }
-    if (state.filters.brand && !brandMatches(p.brand, state.filters.brand))
-      return false;
-    if (state.filters.rim && p.rim !== state.filters.rim) return false;
-    if (state.filters.model) {
-      if (
-        !p.compatibilidadesList ||
-        !p.compatibilidadesList.includes(state.filters.model)
-      )
-        return false;
-    }
-    return true;
+  // Sin coincidencias exactas se ofrecen similares (solo catálogo, ignorando filtros).
+  const similar =
+    isCatalog && !results.length && words.length
+      ? fuzzySearch(state.products, words)
+      : [];
+
+  const pages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  if (state.page > pages) state.page = 1;
+  const offset = (state.page - 1) * PAGE_SIZE;
+  const visible = similar.length
+    ? similar
+    : isCatalog
+      ? results.slice(offset, offset + PAGE_SIZE)
+      : results;
+
+  if (isCatalog) updateCatalogStatus(results.length, similar.length > 0);
+
+  clearTimeout(renderTimer);
+  ui.productsGrid.classList.add("is-updating");
+  renderTimer = setTimeout(() => {
+    renderProducts(visible, ui.productsGrid);
+    ui.productsGrid.classList.remove("is-updating");
+    if (!isCatalog) return;
+    renderPagination(results.length);
+    ui.emptyState.hidden = visible.length > 0;
+  }, RENDER_DELAY_MS);
+}
+
+const scrollToResults = () =>
+  ui.resultsSection.scrollIntoView({ behavior: "smooth" });
+
+// ─── Eventos ─────────────────────────────────────────────────────
+function bindCommonControls() {
+  ui.sortSelect.addEventListener("change", () => {
+    state.sort = ui.sortSelect.value;
+    state.page = 1;
+    apply();
   });
 
-  const sorted = sortProducts(filtered, state.sort);
-  const totalItems = sorted.length;
+  ui.viewToggle.addEventListener("click", (e) => {
+    const button = e.target.closest("[data-view]");
+    if (!button) return;
+    ui.viewToggle
+      .querySelectorAll("[data-view]")
+      .forEach((b) =>
+        b.classList.toggle("view-toggle__btn--active", b === button),
+      );
+    ui.productsGrid.classList.toggle("is-list", button.dataset.view === "list");
+  });
+}
 
-  const queryWords = qNorm.split(/\s+/).filter(Boolean);
-  let isFuzzy = false;
-  let displayProducts = sorted;
+function initCatalog() {
+  const params = new URLSearchParams(location.search);
+  ui.q.value = params.get("q") ?? "";
+  state.category = (params.get("cat") ?? "").trim().toUpperCase();
 
-  if (totalItems === 0 && queryWords.length > 0 && !isHomePage) {
-    const FUZZY_THRESHOLD = 3;
-    const FUZZY_MAX = 8;
-    const scored = state.products
-      .map((p) => ({ p, score: fuzzyScore(p, queryWords) }))
-      .filter(({ score }) => score / queryWords.length <= FUZZY_THRESHOLD)
-      .sort((a, b) => a.score - b.score)
-      .slice(0, FUZZY_MAX)
-      .map(({ p }) => p);
+  fillSelects();
+  syncControls();
 
-    if (scored.length > 0) {
-      isFuzzy = true;
-      displayProducts = scored;
-    }
-  }
-
-  const totalPages = Math.max(
-    1,
-    isFuzzy ? 1 : Math.ceil(totalItems / state.pageSize),
+  ui.q.addEventListener(
+    "input",
+    debounce(() => {
+      state.page = 1;
+      apply();
+    }, 200),
   );
-  if (state.currentPage > totalPages) state.currentPage = 1;
-  const start = (state.currentPage - 1) * state.pageSize;
-  const paginated = isFuzzy
-    ? displayProducts
-    : displayProducts.slice(start, start + state.pageSize);
 
-  updateCatalogUI({ isHomeView, totalItems: isFuzzy ? 0 : totalItems });
+  ui.searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    clearFilters();
+    apply();
+    scrollToResults();
+  });
 
-  let fuzzyBanner = document.getElementById("fuzzyBanner");
-  if (isFuzzy) {
-    if (!fuzzyBanner) {
-      fuzzyBanner = document.createElement("p");
-      fuzzyBanner.id = "fuzzyBanner";
-      fuzzyBanner.className = "fuzzy-banner";
-      els.productsGrid?.parentNode?.insertBefore(fuzzyBanner, els.productsGrid);
-    }
-    fuzzyBanner.hidden = false;
-    fuzzyBanner.textContent = `No encontramos "${els.q?.value.trim()}". Mostrando resultados similares:`;
-  } else {
-    if (fuzzyBanner) fuzzyBanner.hidden = true;
-  }
+  ui.filterCategory.addEventListener("change", () => {
+    ui.q.value = "";
+    setCategory(ui.filterCategory.value);
+  });
 
-  if (els.emptyState) els.emptyState.hidden = true;
+  [
+    ["filterBrand", "brand"],
+    ["filterModel", "model"],
+    ["filterRim", "rim"],
+  ].forEach(([id, key]) =>
+    ui[id].addEventListener("change", () => {
+      state[key] = ui[id].value;
+      if (key === "brand") state.model = "";
+      state.page = 1;
+      ui.q.value = "";
+      syncControls();
+      apply();
+    }),
+  );
 
-  if (els.productsGrid) {
-    els.productsGrid.style.opacity = "0";
-    els.productsGrid.style.transform = "translateY(12px)";
-    setTimeout(() => {
-      renderProducts(paginated, els);
-      if (!isFuzzy)
-        renderPagination(totalItems, state.currentPage, state.pageSize);
-      else if (els.pagination) els.pagination.innerHTML = "";
+  ui.clearFiltersBtn.addEventListener("click", () => {
+    resetAll();
+    toggleSheet(false);
+  });
+  ui.emptyReset.addEventListener("click", resetAll);
 
-      if (els.emptyState)
-        els.emptyState.hidden = !(paginated.length === 0 && !isHomePage);
-      els.productsGrid
-        .querySelectorAll(".card")
-        .forEach((card) => initCardTilt(card));
-      els.productsGrid.style.transition =
-        "opacity 0.3s ease, transform 0.3s ease";
-      els.productsGrid.style.opacity = "1";
-      els.productsGrid.style.transform = "translateY(0)";
-    }, 160);
-  } else {
-    renderProducts(paginated, els);
-    if (!isFuzzy)
-      renderPagination(totalItems, state.currentPage, state.pageSize);
-  }
+  ui.mobileFiltersBtn.addEventListener("click", () => toggleSheet(true));
+  [ui.closeFiltersBtn, ui.mobileFiltersOverlay, ui.applyFiltersBtn].forEach(
+    (el) => el.addEventListener("click", () => toggleSheet(false)),
+  );
+
+  ui.pagination.addEventListener("click", (e) => {
+    const button = e.target.closest("[data-page]");
+    if (!button || button.disabled) return;
+    state.page = Number(button.dataset.page);
+    apply();
+    scrollToResults();
+  });
+
+  // Navegación por categoría sin recargar; con modificadores se respeta el comportamiento nativo.
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[data-nav-category]");
+    if (!link || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    const { navCategory } = link.dataset;
+    history.replaceState(null, "", catalogUrl(navCategory));
+    setCategory(navCategory);
+    scrollToResults();
+  });
 }
 
-function scrollToResults() {
-  if (!els.resultsSection) return;
-  const offset = window.innerWidth <= 768 ? 80 : 120;
-  const top =
-    els.resultsSection.getBoundingClientRect().top +
-    window.pageYOffset -
-    offset;
-  window.scrollTo({ top, behavior: "smooth" });
-}
-
-function handleNavCategoryClick(e) {
-  const link = e.target.closest("[data-nav-category]");
-  if (!link) return;
-  if (link.tagName === "A" && !link.closest(".nav") && !link.closest(".footer"))
-    return;
-
-  e.preventDefault();
-  const category = link.getAttribute("data-nav-category") || "";
-
-  if (isHomePage) {
-    goToCatalog({ category });
-    return;
-  }
-
-  state.category = category;
-  state.currentPage = 1;
-  clearDependentFilters();
-  setActiveNav(state.category);
-  updateModelFilter();
-  updateRimFilterVisibility();
-  apply();
-  scrollToResults();
-  document.getElementById("mainNav")?.classList.remove("is-mobile-open");
-  document.getElementById("mobileMenuBtn")?.classList.remove("is-open");
-}
-
-function toggleMobileFilters(show) {
-  if (els.catalogSidebar && els.mobileFiltersOverlay) {
-    els.catalogSidebar.classList.toggle("is-open", show);
-    els.mobileFiltersOverlay.classList.toggle("is-open", show);
-    document.body.classList.toggle("no-scroll", show);
-  }
-}
-
-// ─── Inicialización (Boot) ───────────────────────────────────────
 async function boot() {
-  initSharedUI();
+  initShell();
+  initHero();
   try {
     state.products = await loadProducts();
-    const urlParams = new URLSearchParams(window.location.search);
-    const qFromUrl = urlParams.get("q");
-    const catFromUrl = urlParams.get("cat");
-
-    if (qFromUrl && els.q) els.q.value = qFromUrl;
-    if (isCatalogPage && catFromUrl) {
-      state.category = String(catFromUrl).trim().toUpperCase();
-    }
-
-    setProductsIndex(state.products);
-    initCartUI();
-    initHeroSlider();
-    initViewToggle();
-    observeRevealItems();
-    buildCategoryNav(state.products);
-    setActiveNav(state.category);
-    buildFilters(state.products);
+    setCatalog(state.products);
+    initCart();
+    bindCommonControls();
+    if (isCatalog) initCatalog();
     apply();
-
-    // Eventos de interfaz
-    els.mobileFiltersBtn?.addEventListener("click", () =>
-      toggleMobileFilters(true),
-    );
-    els.closeFiltersBtn?.addEventListener("click", () =>
-      toggleMobileFilters(false),
-    );
-    els.mobileFiltersOverlay?.addEventListener("click", () =>
-      toggleMobileFilters(false),
-    );
-    els.applyFiltersBtn?.addEventListener("click", () =>
-      toggleMobileFilters(false),
-    );
-
-    if (isCatalogPage) {
-      els.q?.addEventListener("input", () => {
-        state.currentPage = 1;
-        apply();
-      });
-    }
-
-    const triggerSearch = () => {
-      const q = String(els.q?.value ?? "").trim();
-      if (isHomePage) {
-        goToCatalog({ q });
-        return;
-      }
-      clearSidebarFilters();
-      state.currentPage = 1;
-      apply();
-      scrollToResults();
-    };
-
-    els.searchBtn?.addEventListener("click", triggerSearch);
-    els.q?.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") triggerSearch();
-    });
-
-    els.filterCategory?.addEventListener("change", () => {
-      state.category = els.filterCategory.value;
-      state.currentPage = 1;
-      if (els.q) els.q.value = "";
-      clearDependentFilters();
-      setActiveNav(state.category);
-      updateModelFilter();
-      updateRimFilterVisibility();
-      apply();
-    });
-
-    els.filterBrand?.addEventListener("change", () => {
-      state.filters.brand = els.filterBrand.value;
-      state.filters.model = "";
-      state.currentPage = 1;
-      if (els.q) els.q.value = "";
-      updateModelFilter();
-      apply();
-    });
-
-    els.filterModel?.addEventListener("change", () => {
-      state.filters.model = els.filterModel.value;
-      state.currentPage = 1;
-      if (els.q) els.q.value = "";
-      apply();
-    });
-
-    els.filterRim?.addEventListener("change", () => {
-      state.filters.rim = els.filterRim.value;
-      state.currentPage = 1;
-      if (els.q) els.q.value = "";
-      apply();
-    });
-
-    els.sortSelect?.addEventListener("change", () => {
-      state.sort = els.sortSelect.value;
-      state.currentPage = 1;
-      apply();
-    });
-
-    els.clearFiltersBtn?.addEventListener("click", () => {
-      clearSidebarFilters();
-      if (els.q) els.q.value = "";
-      state.currentPage = 1;
-      apply();
-      toggleMobileFilters(false);
-    });
-
-    els.emptyReset?.addEventListener("click", () => {
-      clearSidebarFilters();
-      if (els.q) els.q.value = "";
-      state.currentPage = 1;
-      apply();
-    });
-
-    document.addEventListener("click", handleNavCategoryClick);
-
-    els.pagination?.addEventListener("click", (e) => {
-      const btn = e.target.closest("[data-page]");
-      if (!btn || btn.disabled) return;
-      const page = Number(btn.getAttribute("data-page"));
-      if (!page || page < 1) return;
-      state.currentPage = page;
-      apply();
-      scrollToResults();
-    });
-
-    document.addEventListener("fly-to-cart", (e) => {
-      flyToCart(e.detail.sourceEl);
-    });
   } catch (err) {
     console.error("Error al iniciar la app:", err);
-    if (els.productsGrid) els.productsGrid.innerHTML = "";
-    if (els.resultsCount) {
-      els.resultsCount.hidden = false;
-      els.resultsCount.textContent = "No se pudieron cargar los productos";
-    }
+    ui.productsGrid.innerHTML = `<p class="grid-notice">No se pudieron cargar los productos</p>`;
+    if (ui.resultsCount) ui.resultsCount.textContent = "";
   }
 }
 
