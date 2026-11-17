@@ -1,0 +1,6299 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+assets/
+  css/
+    reset.css
+    styles.css
+    variables.css
+  img/
+    products/
+      DC01-1.jpg
+      DC01-2.webp
+      DC02-1.jpg
+      DC02-2.webp
+      DC03-1.webp
+      DC03-2.webp
+      DC04-1.webp
+      DC04-2.webp
+      DC05-1.webp
+      DC05-2.webp
+      DC06-1.webp
+      DC06-2.webp
+      DC07-1.jpg
+      DC07-2.webp
+      DC08-1.webp
+      DC08-2.webp
+      DC09-1.webp
+      DC09-2.webp
+      DC10-1.webp
+      DC11-1.webp
+      DC12-1.webp
+      DC12-2.webp
+      DC13-1.jpg
+      DC13-2.webp
+      DFI01-1.webp
+      DFI01-2.webp
+      DFI02-1.jpg
+      DFI02-2.webp
+      DFI02-3.webp
+      DFI03-1.jpg
+      DFI03-2.webp
+      DFI04-1.webp
+      DFI05-1.jpg
+      DFI05-2.webp
+      DFI06-1.webp
+      DFI06-2.webp
+      DFI07-1.jpg
+      DFI07-2.webp
+      DFI08-1.webp
+      DFI08-2.webp
+      DFI09-1.webp
+      DFI10-1.webp
+      DFI10-2.webp
+      DFI11-1.webp
+      DFI12-1.webp
+      DFI13-1.jpg
+      DFI13-2.webp
+      DFI14-1.webp
+      DFI14-2.webp
+      DFI15-1.webp
+      DFI15-2.webp
+      DFI16-1.jpg
+      DFOR01-1.webp
+      DFOR01-2.webp
+      DFOR02-1.webp
+      DFOR02-2.jpg
+      DFOR03-1.webp
+      DFOR03-2.webp
+      DFOR04-1.webp
+      DFOR04-2.webp
+      DFOR04-3.webp
+      DFOR05-1.webp
+      DFOR05-2.jpg
+      DFOR06-1.jpg
+      DFOR06-2.webp
+      DFOR07-1.jpg
+      DFOR07-2.webp
+      DFOR08-1.jpg
+      DFOR08-2.jpg
+      DFOR09-1.jpg
+      DFOR09-2.webp
+      DFOR10-1.webp
+      DFOR11-1.webp
+      DFOR12-1.jpg
+      DFOR12-2.webp
+      DFOR13-1.webp
+      DFOR13-2.webp
+      DFOR14-1.webp
+      DFOR14-2.webp
+      DFOR15-1.webp
+      DFOR15-2.webp
+      DFOR16-1.webp
+      DFOR16-2.webp
+      DFOR17-1.webp
+      DFOR17-2.webp
+      DFOR18-1.jpg
+      DFOR18-2.jpg
+      DFOR19-1.webp
+      DFOR19-2.webp
+      DFOR20-1.webp
+      DFOR20-2.webp
+      DFOR21-1.webp
+      DFOR22-1.webp
+      DMB01-1.webp
+      DMB02-1.webp
+      DMB03-1.jpg
+      DMB03-2.webp
+      DMB04-1.jpg
+      DMB04-2.webp
+      DP01-1.webp
+      DP01-2.webp
+      DP02-1.webp
+      DP02-2.webp
+      DP03-1.jpg
+      DP04-1.webp
+      DP04-2.webp
+      DP05-1.webp
+      DP06-1.webp
+      DP06-2.webp
+      DP07-1.webp
+      DP08-1.webp
+      DP08-2.webp
+      DP09-1.webp
+      DRR01-1.webp
+      DRR01-2.webp
+      DRR02-1.jpg
+      DRR02-2.jpg
+      DRR03-1.jpg
+      DRR03-2.webp
+      DRR04-1.jpg
+      DRR04-2.jpg
+      DRR05-1.webp
+      DRR05-2.webp
+      DRR06-1.webp
+      DRR06-2.webp
+      DRR06-3.webp
+      DRR07-1.jpg
+      DRR07-2.webp
+      DRR08-1.jpg
+      DRR08-2.webp
+      DRR09-1.webp
+      DRR09-2.webp
+      DRR10-1.webp
+      DRR10-2.webp
+      DRR11-1.webp
+      DRR11-2.webp
+      DRR12-1.webp
+      DRR12-2.webp
+      DRR13-1.webp
+      DRR13-2.webp
+      DRR14-1.jpg
+      DT01-1.jpg
+      DT01-2.webp
+      DT02-1.webp
+      DT03-1.jpg
+      DT03-2.jpg
+      DT04-1.webp
+      DT05-1.webp
+      DT05-2.webp
+      DT06-1.jpg
+      DT06-2.webp
+      DT07-1.webp
+      DT08-1.jpg
+      DT09-1.webp
+      DT09-2.webp
+      DT10-1.webp
+      DVW01-1.jpg
+      DVW01-2.jpg
+      DVW02-1.webp
+      DVW03-1.webp
+      DVW03-2.webp
+      DVW04-1.jpg
+      DVW04-2.jpg
+      DVW05-1.webp
+      DVW05-2.webp
+      DVW06-1.webp
+      DVW06-2.webp
+      DVW07-1.webp
+      DVW07-2.webp
+      DVW08-1.webp
+      DVW08-2.webp
+      DVW09-1.webp
+      DVW09-2.webp
+      EC001-1.jpg
+      EC001-2.jpg
+      EC001-3.jpg
+      EC002-1.jpg
+      EC002-2.jpg
+      EC002-3.jpg
+      EC003-1.jpg
+      EC003-2.jpg
+      EC004-1.jpg
+      EC004-2.jpg
+      EC004-3.jpg
+      EC005-1.jpg
+      EC005-2.jpg
+      EC005-3.jpg
+      EC006-1.jpg
+      EC007-1.jpg
+      EC007-2.jpg
+      EC008-1.jpg
+      EC008-2.jpg
+      EC008-3.jpg
+      ECTT01-1.webp
+      ECTT01-2.webp
+      ECTT01-3.webp
+      ECTT02-1.webp
+      ECTT02-2.webp
+      ECTT02-3.webp
+      ECTT03-1.jpg
+      ECTT03-2.jpg
+      ECTT03-3.webp
+      EFI001-1.webp
+      EFI001-2.webp
+      EFI002-1.webp
+      EFI002-2.webp
+      EFI002-3.webp
+      EFI003-1.jpg
+      EFI003-2.webp
+      EFI004-1.jpg
+      EFI004-2.webp
+      EFI004-3.webp
+      EFI005-1.webp
+      EFI005-2.webp
+      EFI005-3.webp
+      EFI005-4.webp
+      EFI006-1.webp
+      EFI006-2.webp
+      EFI006-3.webp
+      EFI007-1.webp
+      EFI008-1.webp
+      EFI008-2.webp
+      EFI008-3.webp
+      EFI009-1.webp
+      EFI009-2.webp
+      EFI010-1.webp
+      EFI011-1.webp
+      EFI011-2.webp
+      EFI011-3.webp
+      EFI012-1.jpg
+      EFI012-2.webp
+      EFI013-1.webp
+      EFI013-2.webp
+      EFI013-3.webp
+      EFI014-1.webp
+      EFI014-2.webp
+      EFI014-3.webp
+      EFI015-1.webp
+      EFI015-2.webp
+      EFI015-3.webp
+      EFI016-1.webp
+      EFI016-2.webp
+      EFI017-1.webp
+      EFI017-2.webp
+      EFI017-3.webp
+      EFI017-4.webp
+      EFI017-5.webp
+      EFI017-6.webp
+      EFI018-1.webp
+      EFI018-2.webp
+      EFI018-3.webp
+      EFI019-1.webp
+      EFI019-2.webp
+      EFI019-3.webp
+      EFI019-4.webp
+      EFI020-1.webp
+      EFI020-2.webp
+      EFI020-3.webp
+      EFI021-1.webp
+      EFI021-2.webp
+      EFI021-3.webp
+      EFI021-4.webp
+      EFI021-5.webp
+      EFI021-6.webp
+      EFI021-7.webp
+      EFI021-8.webp
+      EFO001-1.webp
+      EFO001-2.webp
+      EFO001-3.webp
+      EFO001-4.webp
+      EFO002-1.webp
+      EFO002-2.webp
+      EFO002-3.webp
+      EFO003-1.webp
+      EFO003-2.webp
+      EFO004-1.webp
+      EFO004-2.webp
+      EFO005-1.webp
+      EFO005-2.webp
+      EFO005-3.webp
+      EFO005-4.webp
+      EFO006-1.webp
+      EFO006-2.webp
+      EFO006-3.webp
+      EFO007-1.webp
+      EFO007-2.webp
+      EFO007-3.webp
+      EFO007-4.webp
+      EFO008-1.webp
+      EFO008-2.jpg
+      EFO009-1.webp
+      EFO009-2.webp
+      EFO009-3.webp
+      EFO009-4.webp
+      EFO010-1.webp
+      EFO010-2.webp
+      EFO010-3.webp
+      EFO011-1.png
+      EFO012-1.jpg
+      EFO013-1.webp
+      EFO013-2.webp
+      EFO013-3.webp
+      EFO013-4.webp
+      EFO014-1.webp
+      EFO014-2.webp
+      EFO014-3.webp
+      EFO015-1.webp
+      EFO015-2.webp
+      EFO016-1.webp
+      EFO016-2.webp
+      EFO016-3.webp
+      EFO016-4.webp
+      EFO017-1.webp
+      EFO017-2.webp
+      EFO017-3.webp
+      EFO017-4.webp
+      EMB01-1.webp
+      EMB01-2.webp
+      EMB01-3.webp
+      EP001-1.webp
+      EP001-2.webp
+      EP002-1.webp
+      EP002-2.webp
+      EP002-3.jpg
+      EP003-1.jpg
+      EP003-2.webp
+      EP003-3.webp
+      EP004-1.webp
+      EP004-2.webp
+      EP004-3.webp
+      EP005-1.jpg
+      EP005-2.webp
+      EP006-1.webp
+      EP006-2.jpg
+      EP006-3.jpg
+      EP007-1.webp
+      EP007-2.webp
+      EP008-1.webp
+      EP008-2.webp
+      EP008-3.webp
+      EP008-4.webp
+      EP010-1.webp
+      EP010-2.webp
+      EP011-1.jpg
+      EP011-2.webp
+      EP011-3.webp
+      EP011-4.jpg
+      EP012-1.jpg
+      EP012-2.webp
+      EP012-3.webp
+      EP012-4.webp
+      EP012-5.webp
+      EP012-6.webp
+      EP012-7.webp
+      ER001-1.webp
+      ER001-2.webp
+      ER001-3.webp
+      ER001-4.webp
+      ER001-5.webp
+      ER002-1.webp
+      ER002-2.webp
+      ER003-1.webp
+      ER003-2.webp
+      ER004-1.webp
+      ER004-2.webp
+      ER004-3.webp
+      ER005-1.png
+      ER005-2.webp
+      ER005-3.webp
+      ER006-1.webp
+      ER006-2.webp
+      ER007-1.webp
+      ER007-2.webp
+      ER008-1.webp
+      ER008-2.webp
+      ER008-3.webp
+      ER009-1.jpg
+      ER009-2.webp
+      ER009-3.webp
+      ER010-1.webp
+      ER010-2.webp
+      ER011-1.webp
+      ER011-2.webp
+      ER011-3.webp
+      ER012-1.webp
+      ER012-2.webp
+      ER012-3.jpg
+      ER012-4.webp
+      ER013-1.png
+      ER013-2.webp
+      ER014-1.webp
+      ER014-2.webp
+      ER014-3.webp
+      ER015-1.webp
+      ER015-2.webp
+      ER016-1.webp
+      ER016-2.webp
+      ER016-3.jpg
+      ER017-1.webp
+      ER017-2.webp
+      ER017-3.webp
+      ER017-4.webp
+      ER018-1.jpg
+      ER018-2.jpg
+      ER018-3.webp
+      ER021-1.webp
+      ER021-2.webp
+      ER021-3.webp
+      ER021-4.webp
+      ET001-1.webp
+      ET001-2.webp
+      ET001-3.webp
+      ET001-4.webp
+      ET002-1.webp
+      ET002-2.webp
+      ET002-3.webp
+      ET002-4.webp
+      ET003-1.webp
+      ET003-2.webp
+      ET003-3.webp
+      ET003-4.webp
+      ET003-5.webp
+      ET004-1.webp
+      ET004-2.webp
+      ET004-3.webp
+      ET004-4.webp
+      ET004-5.webp
+      ET006-1.webp
+      ET006-2.webp
+      ET006-3.webp
+      ET006-4.webp
+      ET007-1.webp
+      ET007-2.webp
+      ET007-3.webp
+      ET007-4.webp
+      ET008-1.webp
+      ET008-2.webp
+      ET008-3.webp
+      ET010-1.webp
+      ET010-2.webp
+      ET010-3.webp
+      ET011-1.webp
+      ET011-2.webp
+      ET011-3.webp
+      ET012-1.webp
+      ET012-2.webp
+      ET012-3.webp
+      ET013-1.webp
+      ET013-2.webp
+      ET013-3.webp
+      ET013-4.webp
+      ET014-1.webp
+      ET015-1.webp
+      ET015-2.webp
+      ET016-1.webp
+      ET016-2.webp
+      EU001-1.webp
+      EU001-2.webp
+      EU002-1.webp
+      EU002-2.jpg
+      EU003-1.webp
+      EU003-2.webp
+      EU004-1.webp
+      EU005-1.jpg
+      EU006-1.webp
+      EU006-2.webp
+      EU007-1.jpg
+      EU007-2.jpg
+      EU008-1.webp
+      EU008-2.jpg
+      EV001-1.jpg
+      EV001-2.jpg
+      EV001-3.jpg
+      EV001-4.jpg
+      EV002-1.jpg
+      EV002-2.jpg
+      EV002-3.jpg
+      EV003-1.jpg
+      EV003-2.jpg
+      EV004-1.jpg
+      EV004-2.jpg
+      EV004-3.jpg
+      EV005-1.jpg
+      EV005-2.jpg
+      EV006-1.jpg
+      EV006-2.jpg
+      EV006-3.jpg
+      EV007-1.jpg
+      EV007-2.jpg
+      EV008-1.jpg
+      EV008-2.jpg
+      EV008-3.jpg
+      EV009-1.jpg
+      EV009-2.jpg
+      EV009-3.webp
+      EV010-1.webp
+      EV010-2.webp
+      EV011-1.webp
+      EV011-2.webp
+      EV011-3.jpg
+      EV012-1.webp
+      EV012-2.webp
+      EV012-3.webp
+      EV012-4.webp
+      FTCC01-1.webp
+      FTCC01-2.webp
+      FTCC01-3.webp
+      FTCC02-1.jpg
+      FTCC02-2.webp
+      FTCC02-3.webp
+      FTCC03-1.webp
+      FTCC03-2.webp
+      FTCC03-3.webp
+      FTCC04-1.webp
+      FTCC04-2.webp
+      FTCC04-3.webp
+      FTCC05-1.webp
+      FTCC05-2.webp
+      FTCC06-1.jpg
+      FTCC06-2.webp
+      FTCC06-3.webp
+      FTCC07-1.webp
+      FTCC07-2.webp
+      FTCC08-1.webp
+      FTCC08-2.webp
+      FTCC08-3.webp
+      FTCC09-1.webp
+      FTCC09-2.webp
+      FTOF01-1.webp
+      FTOF01-2.webp
+      FTOF01-3.webp
+      FTOF01-4.webp
+      FTOF01-5.webp
+      FTOF02-1.webp
+      FTOF02-2.webp
+      FTOF02-3.webp
+      FTOF02-4.webp
+      FTOF03-1.webp
+      FTOF03-2.webp
+      FTOF03-3.webp
+      FTOF03-4.webp
+      FTOF03-5.webp
+      FTOF04-1.webp
+      FTOF04-2.webp
+      FTOF04-3.webp
+      FTOF05-1.webp
+      FTOF05-2.webp
+      FTOF05-3.webp
+      FTOF06-1.webp
+      FTOF06-2.webp
+      FTOF06-3.webp
+      FTOF07-1.webp
+      FTOF07-2.webp
+      FTOF08-1.webp
+      FTOF08-2.jpg
+      FTOF08-3.webp
+      FTOF09-1.webp
+      FTOF09-2.webp
+      FTOF09-3.webp
+      FTOF10-1.jpg
+      FTOF10-2.webp
+      FTOF10-3.webp
+      FTOF10-4.webp
+      FTRR01-1.webp
+      FTRR01-2.webp
+      FTRR01-3.webp
+      FTRR02-1.webp
+      FTRR02-2.webp
+      FTRR02-3.webp
+      FTRR03-1.webp
+      FTRR03-2.jpg
+      FTRR03-3.webp
+      FTRR04-1.webp
+      FTRR04-2.webp
+      FTRR04-3.webp
+      FTRR05-1.webp
+      FTRR05-2.webp
+      FTRR05-3.webp
+      FTRR06-1.jpg
+      FTRR06-2.webp
+      FTRR06-3.webp
+      FTRR07-1.webp
+      FTRR07-2.webp
+      FTRR07-3.webp
+      FTRR08-1.webp
+      FTRR08-2.webp
+      FTRR08-3.webp
+      FTRR09-1.jpg
+      FTRR09-2.webp
+      FTRR09-3.webp
+      FTRR10-1.webp
+      FTRR10-2.webp
+      FTRR10-3.webp
+      FTTT01-1.webp
+      FTTT01-2.webp
+      FTTT01-3.webp
+      FTTT02-1.webp
+      FTTT02-2.webp
+      FTTT03-1.jpg
+      FTTT03-2.webp
+      FTTT03-3.webp
+      FTTT04-1.jpg
+      FTTT04-2.png
+      FTTT04-3.png
+      FTTT04-4.webp
+      FTTT05-1.jpg
+      FTTT05-2.jpg
+      FTTT05-3.webp
+      FTVVW01-1.jpg
+      FTVVW01-2.jpg
+      FTVVW01-3.jpg
+      FTVVW01-4.jpg
+      FTVVW01-5.jpg
+      FTVVW02-1.jpg
+      FTVVW02-2.jpg
+      FTVVW03-1.webp
+      FTVVW03-2.webp
+      FTVVW03-3.webp
+      FTVVW04-1.webp
+      FTVVW04-2.webp
+      FTVVW04-3.webp
+      FTVVW05-1.webp
+      FTVVW05-2.webp
+      FTVVW05-3.webp
+      FTVVW05-4.jpg
+      OPCC01-1.webp
+      OPCC01-2.webp
+      OPCC01-3.webp
+      OPCC02-1.jpg
+      OPCC02-2.webp
+      OPCC02-3.webp
+      OPCC03-1.webp
+      OPCC03-2.webp
+      OPCC03-3.webp
+      OPCC04-1.webp
+      OPCC04-2.webp
+      OPCC04-3.webp
+      OPCC05-1.webp
+      OPCC05-2.jpg
+      OPCC06-1.webp
+      OPCC06-2.webp
+      OPCC06-3.webp
+      OPCC07-1.webp
+      OPCC07-2.webp
+      OPCC07-3.webp
+      OPFF01-1.webp
+      OPFF01-2.webp
+      OPFF02-1.webp
+      OPFF02-2.webp
+      OPFF03-1.webp
+      OPFF03-2.webp
+      OPFF04-1.webp
+      OPFF04-2.webp
+      OPFF04-3.webp
+      OPFF05-1.jpg
+      OPFF05-2.webp
+      OPFF05-3.webp
+      OPFF06-1.webp
+      OPFF06-2.webp
+      OPFF06-3.webp
+      OPFF07-1.jpg
+      OPFF07-2.webp
+      OPFF08-1.webp
+      OPFF08-2.webp
+      OPFF09-1.webp
+      OPFF09-2.webp
+      OPFF09-3.webp
+      OPFF10-1.webp
+      OPFF10-2.webp
+      OPFF10-3.webp
+      OPFF10-4.webp
+      OPFF11-1.jpg
+      OPFF11-2.jpg
+      OPFF11-3.webp
+      OPFF12-1.webp
+      OPFF12-2.webp
+      OPFF12-3.webp
+      OPFF15-1.jpg
+      OPFF15-2.webp
+      OPFF15-3.webp
+      OPFF16-1.webp
+      OPFF16-2.webp
+      OPFF16-3.webp
+      OPFI01-1.webp
+      OPFI01-2.webp
+      OPFI01-3.webp
+      OPFI02-1.jpg
+      OPFI02-2.webp
+      OPFI02-3.webp
+      OPFI04-1.webp
+      OPFI04-2.webp
+      OPFI05-1.webp
+      OPFI05-2.webp
+      OPFI06-1.webp
+      OPFI06-2.jpg
+      OPFI07-1.webp
+      OPFI07-2.webp
+      OPFI07-3.webp
+      OPFI08-1.jpg
+      OPFI08-2.jpg
+      OPFI09-1.webp
+      OPFI10-1.webp
+      OPFI10-2.webp
+      OPFI10-3.webp
+      OPFI11-1.webp
+      OPFI11-2.webp
+      OPFI11-3.jpg
+      OPFI12-1.jpg
+      OPFI12-2.jpg
+      OPFI12-3.webp
+      OPFI13-1.webp
+      OPFI13-2.webp
+      OPFI13-3.webp
+      OPFI14-1.webp
+      OPFI14-2.webp
+      OPFI14-3.webp
+      OPFI14-4.webp
+      OPFI15-1.webp
+      OPFI15-2.webp
+      OPFI15-3.webp
+      OPFI16-1.webp
+      OPFI16-2.webp
+      OPFI16-3.webp
+      OPPP01-1.jpg
+      OPPP01-2.webp
+      OPPP01-3.webp
+      OPPP02-1.webp
+      OPPP02-2.webp
+      OPPP02-3.webp
+      OPPP04-1.jpg
+      OPPP04-2.webp
+      OPPP04-3.webp
+      OPPP05-1.jpg
+      OPPP05-2.webp
+      OPPP05-3.webp
+      OPPP06-1.webp
+      OPPP06-2.webp
+      OPPP06-3.webp
+      OPPP07-1.jpg
+      OPPP07-2.webp
+      OPPP07-3.webp
+      OPPP08-1.webp
+      OPPP08-2.webp
+      OPPP08-3.webp
+      OPPP09-1.webp
+      OPPP09-2.webp
+      OPPP09-3.webp
+      OPRR01-1.webp
+      OPRR01-2.jpg
+      OPRR01-3.webp
+      OPRR02-1.webp
+      OPRR02-2.webp
+      OPRR03-1.webp
+      OPRR03-2.webp
+      OPRR03-3.webp
+      OPRR04-1.jpg
+      OPRR04-2.webp
+      OPRR06-1.jpg
+      OPRR06-2.jpg
+      OPRR07-1.webp
+      OPRR07-2.webp
+      OPRR07-3.webp
+      OPRR08-1.webp
+      OPRR08-2.webp
+      OPRR08-3.webp
+      OPRR08-4.webp
+      OPVVW01-1.jpg
+      OPVVW01-2.jpg
+      OPVVW02-1.jpg
+      OPVVW02-2.jpg
+      OPVVW02-3.jpg
+      OPVVW03-1.webp
+      OPVVW03-2.webp
+      OPVVW03-3.webp
+      OPVVW04-1.webp
+      OPVVW04-2.webp
+      OPVVW05-1.webp
+      OPVVW05-2.jpg
+      OPVVW06-1.webp
+      OPVVW06-2.webp
+      OPVVW06-3.webp
+      OPVVW07-1.webp
+      OPVVW07-2.webp
+      OPVVW08-1.webp
+      OPVVW08-2.webp
+      OPVVW08-3.webp
+      OPVVW09-1.webp
+      OPVVW09-2.webp
+      OPVVW10-1.webp
+      OPVVW10-2.webp
+      OPVVW11-1.webp
+      OPVVW11-2.webp
+      OPVVW11-3.webp
+      OPVVW12-1.webp
+      OPVVW12-2.webp
+      OPVVW12-3.webp
+      OPVVW13-1.webp
+      OPVVW13-2.webp
+      OPVVW13-3.webp
+      RC01-1.jpg
+      RC01-2.jpg
+      RC01-3.jpg
+      RC02-1.webp
+      RC02-2.webp
+      RC02-3.webp
+      RC02-4.webp
+      RC02-5.webp
+      RC02-6.webp
+      RFI01-1.webp
+      RFI01-2.webp
+      RFI02-1.jpg
+      RFI02-2.webp
+      RFI03-1.webp
+      RFI03-2.webp
+      RFI03-3.webp
+      RFI031-1.jpg
+      RFI031-2.webp
+      RFI04-1.webp
+      RFI04-2.webp
+      RFI04-3.webp
+      RFO01-1.webp
+      RFO01-2.webp
+      RFO01-3.webp
+      RR02-1.webp
+      RR02-2.webp
+      RR02-3.webp
+      RR02-4.webp
+      RRE01-1.webp
+      RRE01-2.webp
+      RRE01-3.webp
+      RRE01-4.webp
+      RRE01-5.webp
+      RRE02-1.jpg
+      RRE02-2.webp
+      RRE02-3.webp
+      RRE02-4.webp
+      RVW002-1.webp
+      RVW002-2.webp
+      RVW01-1.webp
+      RVW01-2.webp
+      RVW01-3.webp
+      TC001-1.webp
+      TC001-2.webp
+      TC001-3.webp
+      TC002-1.jpg
+      TC002-2.webp
+      TC002-3.webp
+      TC003-1.jpg
+      TC003-2.webp
+      TC004-1.webp
+      TC004-2.webp
+      TC004-3.webp
+      TC005-1.webp
+      TC005-2.webp
+      TC005-3.webp
+      TC006-1.jpg
+      TC006-2.webp
+      TC007-1.webp
+      TC007-2.webp
+      TC008-1.webp
+      TC008-2.webp
+      TC008-3.webp
+      TC009-1.webp
+      TC009-2.webp
+      TC010-1.jpg
+      TC010-2.webp
+      TC010-3.webp
+      TC011-1.webp
+      TC011-2.webp
+      TC012-1.webp
+      TC012-2.webp
+      TC013-1.webp
+      TC013-2.webp
+      TC014-1.webp
+      TC014-2.webp
+      TC015-1.webp
+      TC015-2.webp
+      TC015-3.webp
+      TFIT001-1.webp
+      TFIT001-2.webp
+      TFIT002-1.webp
+      TFIT002-2.webp
+      TFIT002-3.webp
+      TFIT003-1.webp
+      TFIT003-2.webp
+      TFIT003-3.webp
+      TFIT004-1.webp
+      TFIT004-2.webp
+      TFIT005-1.jpg
+      TFIT005-2.webp
+      TFIT006-1.webp
+      TFIT006-2.webp
+      TFIT007-1.jpg
+      TFIT007-2.webp
+      TFIT008-1.webp
+      TFIT009-1.webp
+      TFIT009-2.webp
+      TFIT009-3.webp
+      TFOR01-1.webp
+      TFOR01-2.webp
+      TFOR02-1.webp
+      TFOR02-2.webp
+      TFOR03-1.webp
+      TFOR03-2.webp
+      TFOR04-1.webp
+      TFOR04-2.webp
+      TFOR05-1.webp
+      TFOR05-2.webp
+      TFOR05-3.webp
+      TFOR06-1.jpg
+      TFOR06-2.webp
+      TFOR06-3.webp
+      TFOR07-1.webp
+      TFOR07-2.webp
+      TFOR07-3.webp
+      TFOR08-1.webp
+      TFOR08-2.webp
+      TFOR09-1.webp
+      TFOR09-2.webp
+      TFOR10-1.webp
+      TFOR10-2.webp
+      TFOR11-1.jpg
+      TFOR11-2.webp
+      TFOR12-1.webp
+      TFOR12-2.webp
+      TFOR13-1.webp
+      TFOR14-1.webp
+      TFOR14-2.webp
+      TFOR14-3.webp
+      TFOR15-1.jpg
+      TFOR15-2.webp
+      TFOR16-1.jpg
+      TFOR16-2.webp
+      TFOR17-1.jpg
+      TFOR17-2.webp
+      TFOR17-3.webp
+      TFOR18-1.webp
+      TFOR18-2.webp
+      TFOR19-1.webp
+      TFOR19-2.webp
+      TFOR20-1.webp
+      TFOR20-2.webp
+      TP001-1.webp
+      TP001-2.webp
+      TP002-1.webp
+      TP002-2.webp
+      TP003-1.webp
+      TP003-2.jpg
+      TP004-1.webp
+      TP004-2.webp
+      TP005-1.webp
+      TP005-2.webp
+      TP006-1.webp
+      TP006-2.webp
+      TP006-3.webp
+      TP007-1.webp
+      TP007-2.webp
+      TP008-1.webp
+      TP008-2.webp
+      TP009-1.webp
+      TP009-2.webp
+      TP010-1.webp
+      TP010-2.webp
+      TR001-1.jpg
+      TR001-2.webp
+      TR002-1.jpg
+      TR002-2.jpg
+      TR003-1.webp
+      TR003-2.webp
+      TR003-3.webp
+      TR004-1.jpg
+      TR004-2.webp
+      TR005-1.webp
+      TR005-2.webp
+      TR005-3.webp
+      TR006-1.webp
+      TR006-2.webp
+      TR007-1.webp
+      TR007-2.webp
+      TR007-3.webp
+      TR007-4.webp
+      TR008-1.webp
+      TR009-1.webp
+      TR009-2.webp
+      TR010-1.jpg
+      TR010-2.jpg
+      TR010-3.webp
+      TR011-1.webp
+      TR012-1.webp
+      TR013-1.webp
+      TR013-2.webp
+      TR013-3.webp
+      TR014-1.webp
+      TR015-1.webp
+      TR015-2.webp
+      TR016-1.webp
+      TR016-2.webp
+      TR017-1.webp
+      TR017-2.webp
+      TR018-1.webp
+      TR018-2.webp
+      TR020-1.webp
+      TR020-2.webp
+      TR021-1.jpg
+      TR021-2.webp
+      TR021-3.webp
+      TS001-1.webp
+      TS001-2.webp
+      TS002-1.webp
+      TS003-1.webp
+      TS003-2.webp
+      TS004-1.webp
+      TS004-2.webp
+      TS005-1.webp
+      TS005-2.webp
+      TT001-1.webp
+      TT001-2.webp
+      TT002-1.webp
+      TT002-2.webp
+      TT003-1.jpg
+      TT003-2.webp
+      TT003-3.webp
+      TT004-1.webp
+      TT004-2.webp
+      TVW001-1.jpg
+      TVW001-2.jpg
+      TVW002-1.jpg
+      TVW002-2.jpg
+      TVW002-3.jpg
+      TVW003-1.webp
+      TVW003-2.webp
+      TVW004-1.webp
+      TVW004-2.webp
+      TVW005-1.webp
+      TVW005-2.webp
+      TVW005-3.webp
+      TVW006-1.webp
+      TVW006-2.webp
+      TVW006-3.webp
+      TVW007-1.webp
+      TVW007-2.webp
+      TVW007-3.webp
+      TVW008-1.jpg
+      TVW008-2.webp
+      TVW009-1.webp
+      TVW009-2.webp
+      TVW009-3.webp
+      TVW010-1.webp
+      TVW010-2.webp
+      TVW011-1.webp
+      TVW011-2.webp
+      TVW011-3.webp
+      TVW012-1.webp
+      TVW012-2.webp
+      TVW013-1.webp
+      TVW013-2.webp
+      TVW014-1.webp
+      TVW014-2.webp
+      TVW015-1.jpg
+      TVW015-2.webp
+      TVW015-3.webp
+      TVW016-1.webp
+      TVW016-2.webp
+      TVW017-1.webp
+      TVW017-2.webp
+      TVW017-3.webp
+      TVW018-1.jpg
+      TVW018-2.webp
+      TVW019-1.webp
+      TVW019-2.webp
+      TVW019-3.webp
+      TVW020-1.jpg
+      TVW020-2.jpg
+      TVW021-1.jpg
+      TVW021-2.jpg
+      TVW022-1.webp
+      TVW022-2.webp
+      TVW022-3.webp
+      TVW023-1.webp
+      TVW023-2.webp
+      TVW023-3.webp
+    hero-deflectores.jpg
+    hero-espejos.jpg
+    hero-faros.jpg
+    hero-opticas.jpg
+    hero-radiadores.jpg
+    hero-tazas.jpg
+    logo.png
+    placeholder.jpg
+  js/
+    core/
+      cart.js
+      config.js
+      data.js
+      icons.js
+      search.js
+      utils.js
+    ui/
+      cards.js
+      components.js
+      gallery.js
+      hero.js
+      shell.js
+    main.js
+    product.js
+.gitignore
+catalogo.html
+index.html
+product.html
+README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="assets/js/core/cart.js">
+import { STORAGE_KEYS } from "./config.js";
+import { icon } from "./icons.js";
+import {
+  byId,
+  escapeHtml,
+  formatPrice,
+  restartAnimation,
+  whatsappUrl,
+} from "./utils.js";
+
+const EXIT_MS = 280;
+const FEEDBACK_MS = 1100;
+
+const EMPTY_HTML = `
+<div class="cart-empty" role="status">
+  <div class="cart-empty__icon">${icon("cart", 32, 1.4)}</div>
+  <p class="cart-empty__text">Tu carrito está vacío</p>
+  <p class="cart-empty__sub">Explorá el catálogo y agregá productos</p>
+</div>`;
+
+const CLEAR_HTML = `
+<div class="cart__clear-wrap">
+  <button class="cart__clear-btn" type="button" data-cart-action="clear" aria-label="Vaciar todo el carrito">
+    ${icon("trash", 13)}Vaciar carrito
+  </button>
+</div>`;
+
+let catalog = new Map();
+let cart = new Map();
+let ui;
+
+export function setCatalog(products) {
+  catalog = new Map(products.map((p) => [p.code, p]));
+}
+
+export function initCart() {
+  ui = {
+    drawer: byId("cartDrawer"),
+    openBtn: byId("cartOpenBtn"),
+    closeBtn: byId("cartCloseBtn"),
+    overlay: byId("cartOverlay"),
+    items: byId("cartItems"),
+    count: byId("cartCount"),
+    total: byId("cartTotal"),
+    checkoutBtn: byId("checkoutBtn"),
+  };
+
+  cart = loadCart();
+  render();
+
+  ui.openBtn.addEventListener("click", () => setDrawer(true));
+  ui.closeBtn.addEventListener("click", () => setDrawer(false));
+  ui.overlay.addEventListener("click", () => setDrawer(false));
+  ui.checkoutBtn.addEventListener("click", () =>
+    window.open(whatsappUrl(orderMessage()), "_blank", "noopener,noreferrer"),
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && ui.drawer.classList.contains("is-open"))
+      setDrawer(false);
+  });
+  document.addEventListener("click", onDocumentClick);
+}
+
+function setDrawer(open) {
+  // El foco debe salir del drawer antes de marcarlo aria-hidden.
+  if (open) render(true);
+  else ui.openBtn.focus();
+
+  ui.drawer.classList.toggle("is-open", open);
+  ui.drawer.setAttribute("aria-hidden", String(!open));
+  document.body.style.overflow = open ? "hidden" : "";
+  if (open) setTimeout(() => ui.closeBtn.focus(), 120);
+}
+
+function onDocumentClick(e) {
+  const addBtn = e.target.closest("[data-add-to-cart]");
+  if (addBtn) return addToCart(addBtn);
+
+  const actionBtn = e.target.closest("[data-cart-action]");
+  if (actionBtn) runAction(actionBtn);
+}
+
+function addToCart(button) {
+  const code = button.dataset.addToCart;
+  if (!catalog.has(code)) return;
+
+  change(code, 1);
+  flashAdded(button);
+  navigator.vibrate?.(45);
+  document.dispatchEvent(
+    new CustomEvent("cart:added", { detail: { source: button } }),
+  );
+}
+
+// Evita capturar el HTML temporal como "original" si se hace click repetido.
+function flashAdded(button) {
+  if (button.classList.contains("is-added")) return;
+  const original = button.innerHTML;
+  button.style.minWidth = `${button.offsetWidth}px`;
+  button.classList.add("is-added");
+  button.innerHTML = `${icon("check", 14, 3)}¡Agregado!`;
+  setTimeout(() => {
+    button.innerHTML = original;
+    button.classList.remove("is-added");
+    button.style.minWidth = "";
+  }, FEEDBACK_MS);
+}
+
+function runAction(button) {
+  const { cartAction: action, code } = button.dataset;
+  if (action === "inc") change(code, 1);
+  else if (action === "dec") change(code, -1);
+  else if (action === "rm")
+    exitThen(button.closest(".cart-item"), () =>
+      update(() => cart.delete(code)),
+    );
+  else if (action === "clear")
+    exitThen(ui.items, () => update(() => cart.clear()));
+}
+
+function exitThen(element, done) {
+  element.classList.add("is-leaving");
+  setTimeout(() => {
+    element.classList.remove("is-leaving");
+    done();
+  }, EXIT_MS);
+}
+
+function change(code, delta) {
+  update(() => {
+    const qty = (cart.get(code) ?? 0) + delta;
+    if (qty > 0) cart.set(code, qty);
+    else cart.delete(code);
+  });
+}
+
+function update(mutation) {
+  mutation();
+  saveCart();
+  render();
+}
+
+function loadCart() {
+  try {
+    const { items } = JSON.parse(localStorage.getItem(STORAGE_KEYS.cart)) ?? {};
+    return new Map(
+      (Array.isArray(items) ? items : [])
+        .filter(
+          (item) => catalog.has(String(item?.code)) && Number(item.qty) > 0,
+        )
+        .map((item) => [String(item.code), Number(item.qty)]),
+    );
+  } catch {
+    return new Map();
+  }
+}
+
+function saveCart() {
+  try {
+    const items = [...cart].map(([code, qty]) => ({ code, qty }));
+    localStorage.setItem(STORAGE_KEYS.cart, JSON.stringify({ v: 1, items }));
+  } catch {
+    // Storage no disponible (modo privado o cuota): el carrito sigue en memoria.
+  }
+}
+
+function totals() {
+  let count = 0;
+  let total = 0;
+  for (const [code, qty] of cart) {
+    count += qty;
+    total += catalog.get(code).price * qty;
+  }
+  return { count, total };
+}
+
+function orderMessage() {
+  const lines = [...cart].map(([code, qty]) => {
+    const p = catalog.get(code);
+    return `• ${p.description} (Cód: ${code}) x${qty} — ${formatPrice(p.price)}`;
+  });
+  return (
+    `¡Hola! Me gustaría hacer el siguiente pedido:\n\n${lines.join("\n")}` +
+    `\n\n*Total aprox.:* ${formatPrice(totals().total)}\n\n¡Quedo a la espera, gracias!`
+  );
+}
+
+function render(animate = false) {
+  const { count, total } = totals();
+
+  if (ui.count.textContent !== String(count)) {
+    ui.count.textContent = count;
+    restartAnimation(ui.count, "bump");
+  }
+  ui.total.textContent = formatPrice(total);
+  ui.checkoutBtn.disabled = !cart.size;
+  ui.items.classList.toggle("is-animated", animate);
+  ui.items.innerHTML = cart.size
+    ? [...cart].map(rowTemplate).join("") + CLEAR_HTML
+    : EMPTY_HTML;
+}
+
+const actionButton = (action, code, className, label, iconName, size, stroke) =>
+  `<button class="${className}" type="button" data-cart-action="${action}" data-code="${escapeHtml(code)}" aria-label="${label}">${icon(iconName, size, stroke)}</button>`;
+
+function rowTemplate([code, qty], index) {
+  const p = catalog.get(code);
+  const name = escapeHtml(p.description);
+  const meta = [p.brand, p.rim && `Rod. ${p.rim}`, `Cód. ${code}`]
+    .filter(Boolean)
+    .map(escapeHtml)
+    .join(" · ");
+
+  return `
+<div class="cart-item" style="--i:${index}">
+  <div class="cart-item__img"><img src="${escapeHtml(p.images[0])}" alt="${name}" loading="lazy" /></div>
+  <div class="cart-item__top">
+    <p class="cart-item__name">${name}</p>
+    <p class="cart-item__meta">${meta}</p>
+    <p class="cart-item__unit">${formatPrice(p.price)} c/u</p>
+    <div class="cart-item__bottom">
+      <div class="qty" role="group" aria-label="Cantidad">
+        ${actionButton("dec", code, "qty__btn", "Quitar uno", "minus", 11, 3)}
+        <span class="qty__value" aria-live="polite">${qty}</span>
+        ${actionButton("inc", code, "qty__btn", "Agregar uno", "plus", 11, 3)}
+      </div>
+      <span class="cart-item__price">${formatPrice(p.price * qty)}</span>
+      ${actionButton("rm", code, "cart-item__remove", `Eliminar ${name}`, "trash", 13, 2)}
+    </div>
+  </div>
+</div>`;
+}
+</file>
+
+<file path="assets/js/core/config.js">
+export const CONTACT = {
+  whatsapp: "5491131898284",
+  phoneLabel: "+54 11 3189 8284",
+  email: "ventas@rsaccesorios.com",
+  location: "Buenos Aires, Argentina",
+};
+
+export const CATEGORIES = {
+  ESPEJOS: "Espejos",
+  TAZAS: "Tazas",
+  OPTICAS: "Ópticas",
+  FAROS: "Faros",
+  RADIADORES: "Radiadores",
+  DEFLECTORES: "Deflectores",
+};
+
+export const FEATURED_PER_CATEGORY = {
+  ESPEJOS: 2,
+  TAZAS: 2,
+  OPTICAS: 2,
+  FAROS: 2,
+  RADIADORES: 1,
+  DEFLECTORES: 1,
+};
+
+export const SHEET_CSV_URL =
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vQWnJSvkfZsCyvH87yDY2P2JXUDUK8CmlIc2f93ptw5zSJYMoKhq4pdFBhUdPnVdw/pub?gid=847739532&single=true&output=csv";
+
+export const IMAGE_BASE = "./assets/img/products/";
+export const PLACEHOLDER_IMG = "./assets/img/placeholder.jpg";
+
+export const STORAGE_KEYS = {
+  cart: "rs_cart_v1",
+  products: "lds_products_v2",
+};
+</file>
+
+<file path="assets/js/core/data.js">
+import {
+  IMAGE_BASE,
+  PLACEHOLDER_IMG,
+  SHEET_CSV_URL,
+  STORAGE_KEYS,
+} from "./config.js";
+import { normalizeText } from "./utils.js";
+
+// Parser RFC 4180: soporta comillas escapadas y saltos de línea dentro de celdas.
+function parseCsv(text) {
+  const source = text.replace(/\r\n?/g, "\n");
+  const rows = [];
+  let row = [];
+  let cell = "";
+  let quoted = false;
+
+  for (let i = 0; i < source.length; i++) {
+    const char = source[i];
+    if (quoted) {
+      if (char !== '"') cell += char;
+      else if (source[i + 1] === '"') ((cell += '"'), i++);
+      else quoted = false;
+    } else if (char === '"') quoted = true;
+    else if (char === ",") (row.push(cell), (cell = ""));
+    else if (char === "\n")
+      (row.push(cell), rows.push(row), (row = []), (cell = ""));
+    else cell += char;
+  }
+  row.push(cell);
+  rows.push(row);
+  return rows.filter((r) => r.some((c) => c.trim()));
+}
+
+// Acepta "1.234,56", "1,234.56" y "1234".
+function parsePrice(value) {
+  const normalized = value
+    .replace(/\s/g, "")
+    .replace(/\.(?=\d{3}(\D|$))/g, "")
+    .replace(/,(?=\d{3}(\D|$))/g, "")
+    .replace(",", ".");
+  const number = Number(normalized);
+  return Number.isFinite(number) ? number : 0;
+}
+
+const parseRim = (description) => {
+  const match = description.match(/\bR(\d{2})\b/i);
+  return match ? `R${match[1]}` : "";
+};
+
+// Descarta la ruta que venga de la hoja y conserva solo el nombre de archivo.
+const parseImages = (value) =>
+  value
+    .split("|")
+    .map((src) => src.trim())
+    .filter(Boolean)
+    .map((src) => IMAGE_BASE + src.split("/").pop());
+
+function toProduct(row) {
+  const price = parsePrice(row.price);
+  const isActive = ["1", "true"].includes(row.active.toLowerCase());
+  if (!isActive || price <= 0) return null;
+
+  const category = row.category.toUpperCase();
+  const brand = row.brand.toUpperCase();
+  const code = row.code.toUpperCase();
+  const images = parseImages(row.image_url);
+
+  return {
+    code,
+    category,
+    brand,
+    brands: brand
+      .split("-")
+      .map((b) => b.trim())
+      .filter(Boolean),
+    title: row.detalle || row.name,
+    description: row.name,
+    descripcion: row.descripcion,
+    price,
+    images: images.length ? images : [PLACEHOLDER_IMG],
+    rim: category === "TAZAS" ? parseRim(row.name) : "",
+    compat: row.compatibilidades
+      ? row.compatibilidades
+          .split("/")
+          .map((m) => m.trim().toUpperCase())
+          .filter(Boolean)
+      : [],
+    searchText: normalizeText(
+      [
+        category,
+        brand,
+        code,
+        row.name,
+        row.detalle,
+        row.descripcion,
+        row.compatibilidades,
+      ].join(" "),
+    ),
+  };
+}
+
+function toProducts(csv) {
+  const [header, ...rows] = parseCsv(csv);
+  if (!header) return [];
+  const keys = header.map((h) => h.trim().toLowerCase());
+  return rows
+    .map((cells) =>
+      toProduct(
+        Object.fromEntries(
+          keys.map((key, i) => [key, (cells[i] ?? "").trim()]),
+        ),
+      ),
+    )
+    .filter(Boolean);
+}
+
+export async function loadProducts() {
+  try {
+    const cached = sessionStorage.getItem(STORAGE_KEYS.products);
+    if (cached) return JSON.parse(cached);
+  } catch {
+    // Caché ilegible o storage bloqueado: se vuelve a pedir la hoja.
+  }
+
+  const response = await fetch(SHEET_CSV_URL, { cache: "no-store" });
+  if (!response.ok)
+    throw new Error(`No se pudo cargar la base de datos (${response.status})`);
+  const products = toProducts(await response.text());
+
+  try {
+    sessionStorage.setItem(STORAGE_KEYS.products, JSON.stringify(products));
+  } catch {
+    // Cuota excedida o storage bloqueado: se continúa sin caché.
+  }
+  return products;
+}
+</file>
+
+<file path="assets/js/core/icons.js">
+const PATHS = {
+  cart: "M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z",
+  check: "M4.5 12.75l6 6 9-13.5",
+  minus: "M19.5 12h-15",
+  plus: "M12 4.5v15m7.5-7.5h-15",
+  close: "M6 18L18 6M6 6l12 12",
+  search: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z",
+  arrowRight: "M14 5l7 7m0 0l-7 7m7-7H3",
+  chevLeft: "M15.75 19.5L8.25 12l7.5-7.5",
+  chevRight: "M8.25 4.5l7.5 7.5-7.5 7.5",
+  trash:
+    "M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0",
+  eye: [
+    "M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z",
+    "M15 12a3 3 0 11-6 0 3 3 0 016 0z",
+  ],
+  zoom: "M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6",
+  truck:
+    "M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12",
+  shield:
+    "M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z",
+  chat: "M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155",
+  coin: "M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  mail: "M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75",
+  pin: [
+    "M15 10.5a3 3 0 11-6 0 3 3 0 016 0z",
+    "M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z",
+  ],
+  grid: "M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z",
+  list: "M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z",
+  sliders:
+    "M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75",
+  searchCircle:
+    "M15.75 15.75l-2.489-2.489m0 0a3.375 3.375 0 10-4.773-4.773 3.375 3.375 0 004.774 4.774zM21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+  warning:
+    "M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z",
+};
+
+const WHATSAPP_PATH =
+  "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z";
+
+export const icon = (name, size = 16, strokeWidth = 2) =>
+  `<svg width="${size}" height="${size}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="${strokeWidth}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${[
+    PATHS[name],
+  ]
+    .flat()
+    .map((d) => `<path d="${d}"/>`)
+    .join("")}</svg>`;
+
+export const whatsappIcon = (size = 16) =>
+  `<svg width="${size}" height="${size}" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="${WHATSAPP_PATH}"/></svg>`;
+</file>
+
+<file path="assets/js/core/search.js">
+import { normalizeText } from "./utils.js";
+
+export const tokenize = (text) =>
+  normalizeText(text).split(/\s+/).filter(Boolean);
+
+function levenshtein(a, b) {
+  let previous = Array.from({ length: b.length + 1 }, (_, j) => j);
+  for (let i = 1; i <= a.length; i++) {
+    const current = [i];
+    for (let j = 1; j <= b.length; j++) {
+      current[j] =
+        a[i - 1] === b[j - 1]
+          ? previous[j - 1]
+          : 1 + Math.min(previous[j], current[j - 1], previous[j - 1]);
+    }
+    previous = current;
+  }
+  return previous[b.length];
+}
+
+// Suma, por palabra buscada, la menor distancia contra los tokens del producto.
+// Los tokens con más de 4 caracteres de diferencia se descartan sin calcular.
+function fuzzyScore(product, words) {
+  const tokens = product.searchText.split(/\s+/).filter(Boolean);
+  return words.reduce((sum, word) => {
+    let best = 10;
+    for (const token of tokens) {
+      if (Math.abs(token.length - word.length) <= 4)
+        best = Math.min(best, levenshtein(word, token));
+    }
+    return sum + best;
+  }, 0);
+}
+
+export function fuzzySearch(
+  products,
+  words,
+  { threshold = 3, limit = 8 } = {},
+) {
+  return products
+    .map((product) => ({ product, score: fuzzyScore(product, words) }))
+    .filter(({ score }) => score / words.length <= threshold)
+    .sort((a, b) => a.score - b.score)
+    .slice(0, limit)
+    .map(({ product }) => product);
+}
+</file>
+
+<file path="assets/js/core/utils.js">
+import { CATEGORIES, CONTACT } from "./config.js";
+
+const HTML_ESCAPES = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#039;",
+};
+const MONEY = new Intl.NumberFormat("es-AR", {
+  style: "currency",
+  currency: "ARS",
+  maximumFractionDigits: 0,
+});
+
+export const byId = (id) => document.getElementById(id);
+
+export const escapeHtml = (value) =>
+  String(value ?? "").replace(/[&<>"']/g, (char) => HTML_ESCAPES[char]);
+
+export const formatPrice = (amount) => MONEY.format(amount);
+
+export const normalizeText = (value) =>
+  String(value ?? "")
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+
+export const categoryLabel = (category) =>
+  CATEGORIES[category] ?? category.charAt(0) + category.slice(1).toLowerCase();
+
+export const catalogUrl = (category = "") =>
+  `./catalogo.html${category ? `?cat=${category}` : ""}`;
+
+export const productUrl = (code) =>
+  `./product.html?code=${encodeURIComponent(code)}`;
+
+export const whatsappUrl = (text = "") =>
+  `https://wa.me/${CONTACT.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ""}`;
+
+export function debounce(fn, ms) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), ms);
+  };
+}
+
+// Safari no implementa requestIdleCallback.
+export const whenIdle = (callback) =>
+  "requestIdleCallback" in window
+    ? requestIdleCallback(callback)
+    : setTimeout(callback, 1);
+
+export function restartAnimation(element, className) {
+  element.classList.remove(className);
+  void element.offsetWidth;
+  element.classList.add(className);
+}
+
+export function onSwipe(element, onLeft, onRight, threshold = 50) {
+  let startX = 0;
+  element.addEventListener(
+    "touchstart",
+    (e) => (startX = e.changedTouches[0].clientX),
+    { passive: true },
+  );
+  element.addEventListener(
+    "touchend",
+    (e) => {
+      const delta = startX - e.changedTouches[0].clientX;
+      if (Math.abs(delta) > threshold) (delta > 0 ? onLeft : onRight)();
+    },
+    { passive: true },
+  );
+}
+</file>
+
+<file path="assets/js/ui/cards.js">
+import { icon } from "../core/icons.js";
+import { escapeHtml, formatPrice, productUrl } from "../core/utils.js";
+import { createGallery } from "./gallery.js";
+
+const FINE_POINTER = !matchMedia("(pointer: coarse)").matches;
+
+const sliderControls = (count) => `
+  <button class="card__slider-btn card__slider-btn--prev" type="button" aria-label="Imagen anterior" data-step="-1">${icon("chevLeft", 14, 2.5)}</button>
+  <button class="card__slider-btn card__slider-btn--next" type="button" aria-label="Imagen siguiente" data-step="1">${icon("chevRight", 14, 2.5)}</button>
+  <div class="card__slider-dots">
+    ${Array.from(
+      { length: count },
+      (_, i) =>
+        `<button class="card__slider-dot${i === 0 ? " is-active" : ""}" type="button" aria-label="Ver imagen ${i + 1}" data-index="${i}"></button>`,
+    ).join("")}
+  </div>`;
+
+function cardTemplate(p) {
+  const href = escapeHtml(productUrl(p.code));
+  const title = escapeHtml(p.title);
+
+  return `
+<article class="card">
+  <div class="card__img-slider">
+    <a class="card__detail-link" href="${href}" tabindex="-1" aria-hidden="true">
+      <div class="card__img"><img src="${escapeHtml(p.images[0])}" alt="${title}" loading="lazy" /></div>
+    </a>
+    ${p.images.length > 1 ? sliderControls(p.images.length) : ""}
+  </div>
+  <div class="card__body">
+    <a class="card__detail-link" href="${href}"><h3 class="card__title">${title}</h3></a>
+    <div class="price"><span class="price__value">${formatPrice(p.price)}</span></div>
+    <div class="card__actions">
+      <a class="btn-card btn-card--ghost" href="${href}">${icon("eye", 14)}Ver detalle</a>
+      <button class="btn-card" type="button" data-add-to-cart="${escapeHtml(p.code)}">${icon("cart", 14, 2.2)}Agregar</button>
+    </div>
+  </div>
+</article>`;
+}
+
+function bindSlider(card, images) {
+  const dots = [...card.querySelectorAll(".card__slider-dot")];
+  const gallery = createGallery(
+    card.querySelector(".card__img img"),
+    images,
+    (index) =>
+      dots.forEach((dot, i) => dot.classList.toggle("is-active", i === index)),
+  );
+
+  // Las imágenes secundarias se descargan recién al primer hover.
+  card.addEventListener("pointerenter", gallery.preload, { once: true });
+  card
+    .querySelectorAll("[data-step]")
+    .forEach((btn) =>
+      btn.addEventListener("click", () =>
+        gallery.step(Number(btn.dataset.step)),
+      ),
+    );
+  dots.forEach((dot) =>
+    dot.addEventListener("click", () => gallery.go(Number(dot.dataset.index))),
+  );
+}
+
+function bindTilt(card) {
+  card.addEventListener("mousemove", ({ clientX, clientY }) => {
+    const rect = card.getBoundingClientRect();
+    const dx = (clientX - rect.left - rect.width / 2) / (rect.width / 2);
+    const dy = (clientY - rect.top - rect.height / 2) / (rect.height / 2);
+    card.style.transition = "transform 0.08s linear";
+    card.style.transform = `translateY(-8px) scale(1.01) rotateX(${(-dy * 5).toFixed(2)}deg) rotateY(${(dx * 5).toFixed(2)}deg)`;
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transition = "";
+    card.style.transform = "";
+  });
+}
+
+export function renderProducts(products, grid) {
+  grid.innerHTML = products.map(cardTemplate).join("");
+  grid.querySelectorAll(".card").forEach((card, i) => {
+    if (products[i].images.length > 1) bindSlider(card, products[i].images);
+    if (FINE_POINTER) bindTilt(card);
+  });
+}
+</file>
+
+<file path="assets/js/ui/components.js">
+import { CATEGORIES, CONTACT } from "../core/config.js";
+import { icon, whatsappIcon } from "../core/icons.js";
+import { catalogUrl, whatsappUrl } from "../core/utils.js";
+import { heroTemplate } from "./hero.js";
+
+const categoryLink = (category, label, className) =>
+  `<a href="${catalogUrl(category)}" class="${className}" data-nav-category="${category}">${label}</a>`;
+
+const categoryLinks = (className) =>
+  [
+    categoryLink("", "Todo el catálogo", className),
+    ...Object.entries(CATEGORIES).map(([category, label]) =>
+      categoryLink(category, label, className),
+    ),
+  ].join("");
+
+const header = () => `
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+<header class="header" id="mainHeader">
+  <div class="header__main">
+    <a href="./index.html" class="brand" aria-label="Ir al inicio">
+      <div class="brand__logo-wrap">
+        <img src="./assets/img/logo.png" alt="Los Del Sur Accesorios" class="brand__img" />
+        <div class="brand__glow"></div>
+      </div>
+    </a>
+
+    <form class="searchbar" id="searchForm" action="./catalogo.html" role="search">
+      <div class="searchbar__inner">
+        <span class="searchbar__icon">${icon("search")}</span>
+        <input id="q" name="q" class="searchbar__input" type="search" placeholder="Buscar productos, marcas, modelos…" autocomplete="off" />
+        <button class="searchbar__btn" type="submit" aria-label="Buscar">${icon("arrowRight", 16, 2.5)}</button>
+      </div>
+    </form>
+
+    <div class="header__actions">
+      <button id="cartOpenBtn" class="cart-trigger" type="button" aria-label="Abrir carrito">
+        <span class="cart-trigger__icon">${icon("cart", 22, 1.6)}<span class="cart-trigger__badge" id="cartCount">0</span></span>
+        <span class="cart-trigger__label">Carrito</span>
+      </button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Categorías" id="mainNav">
+    <div class="nav__inner"><div class="nav__quick-links">${categoryLinks("nav__link")}</div></div>
+  </nav>
+</header>`;
+
+const FEATURES = [
+  ["truck", "Envío por zona", "Consulta disponibilidad"],
+  ["shield", "Garantía de calidad", "Productos certificados"],
+  ["coin", "Cotización gratis", "Respondemos rápido"],
+  ["chat", "Atención por WhatsApp", "Lunes a sábados"],
+];
+
+const features = () => `
+<section class="features-strip" aria-label="Beneficios">
+  <div class="features-strip__inner">
+    ${FEATURES.map(
+      ([iconName, title, subtitle]) => `
+    <div class="feature-chip reveal-item">
+      <div class="feature-chip__icon">${icon(iconName, 20, 1.8)}</div>
+      <div class="feature-chip__text"><strong>${title}</strong><span>${subtitle}</span></div>
+    </div>`,
+    ).join("")}
+  </div>
+</section>`;
+
+const resultsTools = () => `
+<div class="results__bar-right">
+  <div class="filter-select-wrap">
+    <select id="sortSelect" class="filter-select" aria-label="Ordenar productos">
+      <option value="">Ordenar por</option>
+      <option value="price-asc">Precio: menor a mayor</option>
+      <option value="price-desc">Precio: mayor a menor</option>
+      <option value="name-asc">Nombre: A → Z</option>
+      <option value="name-desc">Nombre: Z → A</option>
+    </select>
+  </div>
+  <div class="view-toggle" id="viewToggle" aria-label="Cambiar vista">
+    <button class="view-toggle__btn view-toggle__btn--active" type="button" data-view="grid" aria-label="Vista grilla">${icon("grid")}</button>
+    <button class="view-toggle__btn" type="button" data-view="list" aria-label="Vista lista">${icon("list")}</button>
+  </div>
+</div>`;
+
+const drawer = () => `
+<aside id="cartDrawer" class="drawer" aria-hidden="true">
+  <div class="drawer__overlay" id="cartOverlay"></div>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Tu Carrito">
+    <div class="drawer__header">
+      <div class="drawer__header-left">
+        <div class="drawer__header-icon">${icon("cart", 18, 1.8)}</div>
+        <div>
+          <h2 class="drawer__title">Tu Carrito</h2>
+          <p class="drawer__subtitle">Revisá tu pedido antes de enviar</p>
+        </div>
+      </div>
+      <button id="cartCloseBtn" class="drawer__close" type="button" aria-label="Cerrar carrito">${icon("close", 18)}</button>
+    </div>
+    <div id="cartItems" class="cart"></div>
+    <div class="drawer__footer">
+      <div class="totals">
+        <div class="totals__row">
+          <span class="totals__label">Total estimado</span>
+          <strong id="cartTotal" class="totals__value">$0</strong>
+        </div>
+      </div>
+      <button id="checkoutBtn" class="checkout-btn" type="button">${whatsappIcon(18)}Finalizar por WhatsApp</button>
+    </div>
+  </div>
+</aside>
+<div class="fly-item" id="flyItem" aria-hidden="true"></div>`;
+
+const footer = () => `
+<footer class="footer">
+  <div class="footer__glow" aria-hidden="true"></div>
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <div class="footer__logo-wrap"><img src="./assets/img/logo.png" alt="Los Del Sur Accesorios" class="footer__logo" /></div>
+      <p class="footer__brand-desc">Tu destino premium para accesorios, repuestos y detalles que elevan tu vehículo al siguiente nivel.</p>
+      <a href="${whatsappUrl()}" class="footer__wa-btn">${whatsappIcon()}Contactar ahora</a>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Catálogo</h4>
+      <nav class="footer__nav">${categoryLinks("footer__link")}</nav>
+    </div>
+    <div class="footer__col">
+      <h4 class="footer__col-title">Contacto</h4>
+      <nav class="footer__nav">
+        <a href="${whatsappUrl()}" class="footer__link">${whatsappIcon(14)}${CONTACT.phoneLabel}</a>
+        <a href="mailto:${CONTACT.email}" class="footer__link">${icon("mail", 14)}${CONTACT.email}</a>
+        <span class="footer__link footer__link--static">${icon("pin", 14)}${CONTACT.location}</span>
+      </nav>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© ${new Date().getFullYear()} Los Del Sur Accesorios · Todos los derechos reservados</span>
+    <a href="https://www.linkedin.com/in/ignaciogomez0011">Creado por Ignacio Gomez</a>
+  </div>
+</footer>`;
+
+const SLOTS = {
+  header,
+  hero: heroTemplate,
+  features,
+  "results-tools": resultsTools,
+  drawer,
+  footer,
+};
+
+/** Reemplaza cada [data-slot] e [data-icon] por su markup. Debe ejecutarse antes de leer el DOM. */
+export function mountSlots() {
+  document.querySelectorAll("[data-slot]").forEach((el) => {
+    el.outerHTML = SLOTS[el.dataset.slot]();
+  });
+  document.querySelectorAll("[data-icon]").forEach((el) => {
+    el.outerHTML = icon(
+      el.dataset.icon,
+      Number(el.dataset.size) || 16,
+      Number(el.dataset.stroke) || 2,
+    );
+  });
+}
+</file>
+
+<file path="assets/js/ui/gallery.js">
+const FADE_MS = 150;
+
+/**
+ * Cambia el `src` de una imagen con fundido (clase `is-fading`).
+ * `onChange` recibe el índice activo.
+ */
+export function createGallery(img, images, onChange) {
+  let current = 0;
+  let busy = false;
+
+  const go = (index) => {
+    const next = (index + images.length) % images.length;
+    if (busy || next === current) return;
+    busy = true;
+    current = next;
+    img.classList.add("is-fading");
+    setTimeout(() => {
+      img.onload = img.onerror = () => {
+        img.classList.remove("is-fading");
+        busy = false;
+      };
+      img.src = images[current];
+    }, FADE_MS);
+    onChange?.(current);
+  };
+
+  return {
+    go,
+    step: (delta) => go(current + delta),
+    preload: () =>
+      images.slice(1).forEach((src) => {
+        new Image().src = src;
+      }),
+  };
+}
+</file>
+
+<file path="assets/js/ui/hero.js">
+import { CATEGORIES } from "../core/config.js";
+import { icon } from "../core/icons.js";
+import { byId, catalogUrl, onSwipe } from "../core/utils.js";
+
+const AUTOPLAY_MS = 6000;
+const TICK_MS = 50;
+
+// [categoría, línea 1, énfasis, texto, etiqueta del botón]
+const SLIDES = [
+  [
+    "ESPEJOS",
+    "Visión clara,",
+    "diseño perfecto.",
+    "Espejos premium compatibles con múltiples modelos.",
+    "Ver espejos",
+  ],
+  [
+    "TAZAS",
+    "Detalles que",
+    "marcan la diferencia.",
+    "Tazas que elevan la estética de tu vehículo.",
+    "Ver tazas",
+  ],
+  [
+    "OPTICAS",
+    "Iluminación que",
+    "destaca.",
+    "Ópticas diseñadas para máxima visibilidad y estilo.",
+    "Ver ópticas",
+  ],
+  [
+    "FAROS",
+    "Potencia y",
+    "seguridad.",
+    "Faros de alto rendimiento para cada situación.",
+    "Ver faros",
+  ],
+  [
+    "RADIADORES",
+    "Rendimiento",
+    "sin límites.",
+    "Radiadores confiables para el cuidado del motor.",
+    "Ver radiadores",
+  ],
+  [
+    "DEFLECTORES",
+    "Estilo y",
+    "protección.",
+    "Deflectores que combinan diseño y funcionalidad.",
+    "Ver deflectores",
+  ],
+];
+
+const slideTemplate = ([category, line, emphasis, text, cta], i) => `
+<div class="hero__slide${i === 0 ? " hero__slide--active" : ""}">
+  <div class="hero__media">
+    <img src="./assets/img/hero-${category.toLowerCase()}.jpg" alt="${CATEGORIES[category]}" class="hero__img"
+      ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'} />
+    <div class="hero__media-overlay"></div>
+  </div>
+  <div class="hero__content">
+    <div class="hero__eyebrow"><span class="hero__eyebrow-dot"></span>${CATEGORIES[category]}</div>
+    <h2 class="hero__title">${line}<br /><em class="hero__title-em">${emphasis}</em></h2>
+    <p class="hero__text">${text}</p>
+    <div class="hero__cta-group">
+      <a class="hero__cta hero__cta--primary" href="${catalogUrl(category)}">${cta}</a>
+      <a class="hero__cta hero__cta--ghost" href="${catalogUrl()}">Todo el catálogo</a>
+    </div>
+  </div>
+</div>`;
+
+export const heroTemplate = () => `
+<section class="hero" id="heroSection">
+  <div class="hero__slider">${SLIDES.map(slideTemplate).join("")}</div>
+  <button class="hero__arrow hero__arrow--left" type="button" data-hero-step="-1" aria-label="Anterior">${icon("chevLeft", 20, 2.5)}</button>
+  <button class="hero__arrow hero__arrow--right" type="button" data-hero-step="1" aria-label="Siguiente">${icon("chevRight", 20, 2.5)}</button>
+  <div class="hero__progress-bar"><div class="hero__progress-fill"></div></div>
+  <div class="hero__dots" role="tablist">
+    ${SLIDES.map(
+      ([category], i) =>
+        `<button class="hero__dot${i === 0 ? " hero__dot--active" : ""}" type="button" role="tab" aria-label="Ver ${CATEGORIES[category]}"></button>`,
+    ).join("")}
+  </div>
+  <div class="hero__scroll-hint"><div class="hero__scroll-line"></div><span>scroll</span></div>
+</section>`;
+
+export function initHero() {
+  const root = byId("heroSection");
+  if (!root) return;
+
+  const slides = [...root.querySelectorAll(".hero__slide")];
+  const dots = [...root.querySelectorAll(".hero__dot")];
+  const bar = root.querySelector(".hero__progress-fill");
+  let current = 0;
+  let elapsed = 0;
+  let timer;
+
+  const show = (index) => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("hero__slide--active", i === current);
+      slide.setAttribute("aria-hidden", String(i !== current));
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("hero__dot--active", i === current);
+      dot.setAttribute("aria-selected", String(i === current));
+    });
+  };
+
+  const pause = () => clearInterval(timer);
+
+  const play = () => {
+    pause();
+    elapsed = 0;
+    bar.style.width = "0%";
+    timer = setInterval(() => {
+      elapsed += TICK_MS;
+      bar.style.width = `${Math.min((elapsed / AUTOPLAY_MS) * 100, 100)}%`;
+      if (elapsed >= AUTOPLAY_MS) go(current + 1);
+    }, TICK_MS);
+  };
+
+  const go = (index) => {
+    show(index);
+    play();
+  };
+
+  root.addEventListener("click", ({ target }) => {
+    const dot = target.closest(".hero__dot");
+    if (dot) return go(dots.indexOf(dot));
+    const arrow = target.closest("[data-hero-step]");
+    if (arrow) go(current + Number(arrow.dataset.heroStep));
+  });
+
+  // En táctil, pointerenter se emula con el tap y dejaría el autoplay pausado.
+  root.addEventListener(
+    "pointerenter",
+    (e) => e.pointerType === "mouse" && pause(),
+  );
+  root.addEventListener(
+    "pointerleave",
+    (e) => e.pointerType === "mouse" && play(),
+  );
+  onSwipe(
+    root,
+    () => go(current + 1),
+    () => go(current - 1),
+  );
+
+  show(0);
+  play();
+}
+</file>
+
+<file path="assets/js/ui/shell.js">
+import { byId, escapeHtml, restartAnimation } from "../core/utils.js";
+
+function initHeaderScroll() {
+  const header = byId("mainHeader");
+  const update = () =>
+    header.classList.toggle("is-scrolled", window.scrollY > 12);
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+}
+
+function initCursorGlow() {
+  const glow = byId("cursorGlow");
+  if (matchMedia("(pointer: coarse)").matches) return glow.remove();
+
+  let frame;
+  document.addEventListener(
+    "mousemove",
+    ({ clientX, clientY }) => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        glow.style.transform = `translate(${clientX}px, ${clientY}px) translate(-50%, -50%)`;
+      });
+    },
+    { passive: true },
+  );
+}
+
+function initMobileNav() {
+  const button = byId("mobileMenuBtn");
+  const nav = byId("mainNav");
+  const setOpen = (open) => {
+    nav.classList.toggle("is-mobile-open", open);
+    button.classList.toggle("is-open", open);
+    button.setAttribute("aria-expanded", String(open));
+  };
+
+  button.addEventListener("click", () =>
+    setOpen(!nav.classList.contains("is-mobile-open")),
+  );
+  nav.addEventListener("click", (e) => e.target.closest("a") && setOpen(false));
+  document.addEventListener(
+    "click",
+    (e) => !e.target.closest(".header") && setOpen(false),
+  );
+}
+
+function initReveal() {
+  const observer = new IntersectionObserver(
+    (entries, obs) =>
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return;
+        target.classList.add("is-visible");
+        obs.unobserve(target);
+      }),
+    { rootMargin: "0px 0px -60px 0px", threshold: 0.08 },
+  );
+  document
+    .querySelectorAll(".reveal-item")
+    .forEach((el) => observer.observe(el));
+}
+
+function flyToCart(source) {
+  const fly = byId("flyItem");
+  const target = document.querySelector(".cart-trigger__icon");
+  const origin = (rect) => [
+    rect.left + rect.width / 2 - 26,
+    rect.top + rect.height / 2 - 26,
+  ];
+  const [startX, startY] = origin(source.getBoundingClientRect());
+  const [endX, endY] = origin(target.getBoundingClientRect());
+
+  const image =
+    source.closest(".card")?.querySelector(".card__img img") ??
+    document.querySelector(".product-detail__main-image");
+
+  fly.style.left = `${startX}px`;
+  fly.style.top = `${startY}px`;
+  fly.style.setProperty("--fly-x", `${endX - startX}px`);
+  fly.style.setProperty("--fly-y", `${endY - startY}px`);
+  fly.innerHTML = image
+    ? `<img src="${escapeHtml(image.currentSrc || image.src)}" alt="">`
+    : "";
+  restartAnimation(fly, "is-flying");
+  fly.onanimationend = () => {
+    fly.classList.remove("is-flying");
+    restartAnimation(byId("cartCount"), "bump");
+  };
+}
+
+export function initShell() {
+  initHeaderScroll();
+  initCursorGlow();
+  initMobileNav();
+  initReveal();
+  document.addEventListener("cart:added", (e) => flyToCart(e.detail.source));
+}
+</file>
+
+<file path=".gitignore">
+# Ignorar to-do
+to-do.txt
+</file>
+
+<file path="assets/css/reset.css">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent, #e02020);
+  outline-offset: 3px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::selection {
+  background: rgba(224, 32, 32, 0.18);
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(224, 32, 32, 0.35);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(224, 32, 32, 0.6);
+}
+</file>
+
+<file path="assets/css/variables.css">
+/* Los Del Sur — design tokens. Paleta: blanco base, rojo acento, azul eléctrico, navy. */
+:root {
+  /* Marca */
+  --brand-50: #fff1f1;
+  --brand-400: #ff4040;
+  --brand-500: #e81c1c;
+  --brand-600: #cc0f0f;
+  --brand-700: #aa0a0a;
+
+  --blue-50: #e8f0fd;
+  --blue-300: #5a92f2;
+  --blue-500: #1a5fd4;
+
+  --navy-600: #142860;
+  --navy-700: #0f2050;
+  --navy-800: #0a163a;
+  --navy-900: #050c22;
+  --navy-950: #02060f;
+
+  --neutral-0: #ffffff;
+  --neutral-50: #f8f9fc;
+  --neutral-100: #f0f2f7;
+  --neutral-150: #e6e9f2;
+  --neutral-200: #d8dce8;
+  --neutral-300: #b8bdd0;
+  --neutral-400: #8a90aa;
+  --neutral-500: #606678;
+  --neutral-600: #464c60;
+  --neutral-900: #0e1020;
+
+  /* Semánticos */
+  --color-bg: var(--neutral-50);
+  --color-surface: var(--neutral-0);
+  --color-surface-2: var(--neutral-100);
+  --color-surface-3: var(--neutral-150);
+  --color-border: var(--neutral-200);
+  --color-border-subtle: var(--neutral-150);
+  --color-border-strong: var(--neutral-300);
+  --color-text: var(--neutral-900);
+  --color-text-secondary: var(--neutral-600);
+  --color-text-muted: var(--neutral-400);
+  --color-accent: var(--brand-600);
+  --color-accent-light: var(--brand-50);
+  --color-blue: var(--blue-500);
+  --color-blue-light: var(--blue-50);
+  --color-success: #16a34a;
+  --color-danger: var(--brand-600);
+
+  /* Gradientes */
+  --gradient-brand: linear-gradient(
+    135deg,
+    var(--brand-500) 0%,
+    var(--brand-700) 100%
+  );
+  --gradient-navy: linear-gradient(
+    135deg,
+    var(--navy-600) 0%,
+    var(--navy-900) 100%
+  );
+  --gradient-footer: linear-gradient(
+    180deg,
+    var(--navy-900) 0%,
+    var(--navy-950) 100%
+  );
+  --gradient-card-shine: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    transparent 100%
+  );
+  --gradient-mesh:
+    radial-gradient(
+      ellipse at 15% 50%,
+      rgba(204, 15, 15, 0.07) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(26, 95, 212, 0.06) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 55% 85%,
+      rgba(10, 22, 58, 0.08) 0%,
+      transparent 50%
+    );
+
+  /* Tipografía */
+  --font-base: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-base);
+
+  --font-size-2xs: 0.68rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.85rem;
+  --font-size-base: 0.95rem;
+  --font-size-md: 1.05rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.35rem;
+  --font-size-2xl: 1.65rem;
+  --font-size-3xl: 2.1rem;
+  --font-size-4xl: 2.8rem;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-snug: -0.02em;
+  --letter-spacing-wide: 0.04em;
+  --letter-spacing-widest: 0.12em;
+
+  /* Espaciado */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-full: 9999px;
+
+  /* Sombras */
+  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-2xl: 0 40px 96px rgba(0, 0, 0, 0.2), 0 12px 32px rgba(0, 0, 0, 0.1);
+  --shadow-brand:
+    0 8px 32px rgba(204, 15, 15, 0.3), 0 2px 8px rgba(204, 15, 15, 0.18);
+  --shadow-brand-lg:
+    0 16px 48px rgba(204, 15, 15, 0.36), 0 4px 16px rgba(204, 15, 15, 0.22);
+  --shadow-navy:
+    0 8px 32px rgba(10, 22, 58, 0.28), 0 2px 8px rgba(10, 22, 58, 0.18);
+  --shadow-card:
+    0 1px 3px rgba(0, 0, 0, 0.05), 0 8px 24px rgba(0, 0, 0, 0.07),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover:
+    0 4px 8px rgba(0, 0, 0, 0.04), 0 20px 48px rgba(0, 0, 0, 0.11),
+    0 0 0 1px rgba(26, 95, 212, 0.14);
+
+  /* Transiciones */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-snap: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  /* Layout */
+  --header-main-h: 110px;
+  --header-nav-h: 56px;
+  --header-height: calc(var(--header-main-h) + var(--header-nav-h));
+  --sidebar-width: 272px;
+  --drawer-width: 420px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --content-padding-x: clamp(16px, 4vw, 48px);
+
+  /* Z-index */
+  --z-header: 200;
+  --z-overlay: 300;
+  --z-drawer: 400;
+  --z-toast: 600;
+  --z-cursor: 9999;
+
+  --blur-sm: blur(6px);
+}
+</file>
+
+<file path="catalogo.html">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catálogo | Los Del Sur Accesorios</title>
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/variables.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body data-page="catalog">
+    <div data-slot="header"></div>
+
+    <main>
+      <section id="resultsSection" class="catalog">
+        <div class="mobile-filters-overlay" id="mobileFiltersOverlay"></div>
+
+        <aside id="catalogSidebar" class="catalog__sidebar">
+          <div class="mobile-filters-sheet__handle"></div>
+
+          <div class="filters-box">
+            <div class="filters-box__header">
+              <h3 class="filters-box__title">
+                <span data-icon="sliders"></span>Filtros
+              </h3>
+              <div class="filters-box__actions">
+                <button
+                  id="clearFiltersBtn"
+                  class="filters-box__clear"
+                  type="button"
+                >
+                  <span
+                    data-icon="close"
+                    data-size="12"
+                    data-stroke="2.5"
+                  ></span
+                  >Limpiar
+                </button>
+                <button
+                  id="closeFiltersBtn"
+                  class="mobile-filters-close"
+                  type="button"
+                  aria-label="Cerrar filtros"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label" for="filterCategory">Categoría</label>
+              <div class="filter-select-wrap">
+                <select id="filterCategory" class="filter-select"></select>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="filterBrand">Marca</label>
+              <div class="filter-select-wrap">
+                <select id="filterBrand" class="filter-select"></select>
+              </div>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label" for="filterModel">Modelo</label>
+              <div class="filter-select-wrap">
+                <select
+                  id="filterModel"
+                  class="filter-select"
+                  disabled
+                ></select>
+              </div>
+            </div>
+            <div class="filter-group" id="filterRimGroup" hidden>
+              <label class="filter-label" for="filterRim">Rodado</label>
+              <div class="filter-select-wrap">
+                <select id="filterRim" class="filter-select"></select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile-filters-footer">
+            <button
+              id="applyFiltersBtn"
+              class="mobile-filters-apply"
+              type="button"
+            >
+              Ver Resultados
+            </button>
+          </div>
+        </aside>
+
+        <div class="catalog__content">
+          <div class="results__bar">
+            <div class="results__bar-left">
+              <h1 class="section-title">Resultados</h1>
+              <span id="resultsCount" class="results__count"
+                >Cargando catálogo…</span
+              >
+              <button
+                class="mobile-filters-btn"
+                id="mobileFiltersBtn"
+                type="button"
+              >
+                <span data-icon="sliders"></span>Filtros
+              </button>
+            </div>
+            <div data-slot="results-tools"></div>
+          </div>
+
+          <p id="fuzzyBanner" class="grid-notice" hidden></p>
+          <div id="productsGrid" class="grid" aria-live="polite"></div>
+          <div id="pagination" class="pagination"></div>
+
+          <div id="emptyState" class="empty" hidden>
+            <div class="empty__icon">
+              <span
+                data-icon="searchCircle"
+                data-size="48"
+                data-stroke="1.2"
+              ></span>
+            </div>
+            <h3 class="empty__title">Sin resultados</h3>
+            <p class="empty__text">
+              Ajustá los filtros o probá con otros términos de búsqueda.
+            </p>
+            <button class="empty__reset" id="emptyReset" type="button">
+              Ver todo el catálogo
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-slot="drawer"></div>
+    <div data-slot="footer"></div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
+</file>
+
+<file path="README.md">
+# Los Del Sur - Catálogo de Accesorios 🚗
+
+Catálogo online para e-commerce de accesorios automotores. La plataforma permite a los clientes explorar el stock disponible y deriva automáticamente a WhatsApp para la coordinación y cierre del pedido.
+
+## 🌍 Demo en vivo
+
+[Ver catálogo funcionando] https://losdelsuraccesorios.netlify.app/
+
+## 🛠️ Tecnologías utilizadas
+
+- Frontend: HTML, CSS, JavaScript
+- Integración con API de WhatsApp para checkout
+- Hosting / Deploy: Netlify
+
+## 🚀 Cómo correrlo localmente
+
+Al ser un sitio estático, no requiere configuración compleja:
+
+1. Clonar el repositorio: `git clone https://github.com/nachogomezrp/LosDelSur1.0.git`
+2. Abrir el archivo `index.html` (o el principal) en cualquier navegador.
+</file>
+
+<file path="assets/js/product.js">
+import { initCart, setCatalog } from "./core/cart.js";
+import { loadProducts } from "./core/data.js";
+import { icon, whatsappIcon } from "./core/icons.js";
+import {
+  byId,
+  categoryLabel,
+  escapeHtml,
+  formatPrice,
+  onSwipe,
+  whatsappUrl,
+  whenIdle,
+} from "./core/utils.js";
+import { renderProducts } from "./ui/cards.js";
+import { mountSlots } from "./ui/components.js";
+import { createGallery } from "./ui/gallery.js";
+import { initShell } from "./ui/shell.js";
+
+mountSlots();
+
+const detail = byId("productDetail");
+const relatedSection = byId("relatedSection");
+
+const TRUST_ITEMS = [
+  ["shield", "Calidad garantizada"],
+  ["truck", "Envíos a todo el país"],
+  ["chat", "Atención por WhatsApp"],
+];
+
+const SKELETON = `
+<div class="product-detail__gallery">
+  <div class="skeleton skeleton--main"></div>
+  <div class="skeleton-thumbs">${'<div class="skeleton skeleton--thumb"></div>'.repeat(3)}</div>
+</div>
+<div class="product-detail__info">
+  <div class="skeleton skeleton--badge-row"></div>
+  <div class="skeleton skeleton--title"></div>
+  <div class="skeleton skeleton--title skeleton--title-short"></div>
+  <div class="skeleton skeleton--price"></div>
+  <div class="skeleton skeleton--meta"></div>
+  <div class="skeleton skeleton--btn"></div>
+</div>`;
+
+const messageTemplate = (iconName, title, text, isError = false) => `
+<div class="product-not-found">
+  <div class="product-not-found__icon${isError ? " is-error" : ""}">${icon(iconName, 32, 1.4)}</div>
+  <h1 class="product-not-found__title${isError ? " is-error" : ""}">${title}</h1>
+  <p class="product-not-found__text">${text}</p>
+  <a href="./catalogo.html" class="product-not-found__btn">Volver al catálogo</a>
+</div>`;
+
+const arrowButton = (step) =>
+  `<button class="product-detail__arrow product-detail__arrow--${step < 0 ? "prev" : "next"}" type="button" aria-label="Imagen ${step < 0 ? "anterior" : "siguiente"}" data-step="${step}">${icon(step < 0 ? "chevLeft" : "chevRight", 16, 2.5)}</button>`;
+
+const metaItem = (label, value) => `
+<div class="product-detail__meta-item">
+  <div class="product-detail__meta-label">${label}</div>
+  <div class="product-detail__meta-value">${escapeHtml(value)}</div>
+</div>`;
+
+function detailTemplate(p) {
+  const title = escapeHtml(p.title);
+  const hasMany = p.images.length > 1;
+  const whatsappText = `Hola! Me interesa el producto: ${p.title} (Cód: ${p.code})`;
+
+  return `
+<div class="product-detail__gallery">
+  <div class="product-detail__main-image-wrap">
+    <img class="product-detail__main-image" src="${escapeHtml(p.images[0])}" alt="${title}" loading="eager" />
+    ${hasMany ? arrowButton(-1) + arrowButton(1) : ""}
+    <div class="product-detail__zoom-hint" aria-hidden="true">${icon("zoom", 14)} Zoom</div>
+  </div>
+  ${
+    hasMany
+      ? `<div class="product-detail__thumbs">${p.images
+          .map(
+            (src, i) => `
+    <button class="product-detail__thumb${i === 0 ? " is-active" : ""}" type="button" data-index="${i}" aria-label="Ver imagen ${i + 1}">
+      <img src="${escapeHtml(src)}" alt="${title} — imagen ${i + 1}" loading="lazy" />
+    </button>`,
+          )
+          .join("")}</div>`
+      : ""
+  }
+</div>
+
+<div class="product-detail__info">
+  <h1 class="product-detail__title">${title}</h1>
+  <div class="badges">
+    <span class="badge">${escapeHtml(p.brand)}</span>
+    ${p.rim ? `<span class="badge">Rod. ${escapeHtml(p.rim)}</span>` : ""}
+  </div>
+  <div class="product-detail__price"><span class="product-detail__price-main">${formatPrice(p.price)}</span></div>
+  ${p.descripcion ? `<div class="product-detail__description">${escapeHtml(p.descripcion).replace(/\n/g, "<br>")}</div>` : ""}
+  <div class="product-detail__meta-grid">
+    ${metaItem("Marca", p.brand)}
+    ${metaItem("Categoría", categoryLabel(p.category))}
+    ${p.rim ? metaItem("Rodado", p.rim) : ""}
+  </div>
+  <div class="product-detail__trust">
+    ${TRUST_ITEMS.map(([iconName, text]) => `<div class="trust-item">${icon(iconName, 15)}${text}</div>`).join("")}
+  </div>
+  <div class="product-detail__actions">
+    <button class="product-detail__add" type="button" data-add-to-cart="${escapeHtml(p.code)}">${icon("cart", 18)}Agregar al carrito</button>
+    <a class="product-detail__wa" href="${escapeHtml(whatsappUrl(whatsappText))}">${whatsappIcon()}Consultar por WhatsApp</a>
+  </div>
+</div>`;
+}
+
+function openLightbox(src) {
+  const overlay = document.createElement("div");
+  overlay.className = "lightbox";
+  overlay.innerHTML = `<img src="${escapeHtml(src)}" alt="">`;
+
+  const close = () => {
+    document.removeEventListener("keydown", onKey);
+    overlay.classList.add("is-closing");
+    setTimeout(() => {
+      overlay.remove();
+      document.body.style.overflow = "";
+    }, 200);
+  };
+  const onKey = (e) => e.key === "Escape" && close();
+
+  overlay.addEventListener("click", close);
+  document.addEventListener("keydown", onKey);
+  document.body.appendChild(overlay);
+  document.body.style.overflow = "hidden";
+}
+
+function setupGallery(images) {
+  const wrap = detail.querySelector(".product-detail__main-image-wrap");
+  const thumbs = [...detail.querySelectorAll(".product-detail__thumb")];
+  const gallery = createGallery(wrap.querySelector("img"), images, (index) =>
+    thumbs.forEach((thumb, i) => {
+      thumb.classList.toggle("is-active", i === index);
+      if (i === index)
+        thumb.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+    }),
+  );
+
+  wrap.addEventListener("click", (e) => {
+    const arrow = e.target.closest("[data-step]");
+    if (arrow) gallery.step(Number(arrow.dataset.step));
+    else openLightbox(wrap.querySelector("img").src);
+  });
+
+  if (images.length < 2) return;
+
+  thumbs.forEach((thumb) =>
+    thumb.addEventListener("click", () =>
+      gallery.go(Number(thumb.dataset.index)),
+    ),
+  );
+  onSwipe(
+    wrap,
+    () => gallery.step(1),
+    () => gallery.step(-1),
+    40,
+  );
+  document.addEventListener("keydown", (e) => {
+    if (e.target.matches("input, select, textarea")) return;
+    if (e.key === "ArrowLeft") gallery.step(-1);
+    if (e.key === "ArrowRight") gallery.step(1);
+  });
+  whenIdle(gallery.preload);
+}
+
+async function boot() {
+  initShell();
+  detail.innerHTML = SKELETON;
+
+  try {
+    const products = await loadProducts();
+    setCatalog(products);
+    initCart();
+
+    const code = (new URLSearchParams(location.search).get("code") ?? "")
+      .trim()
+      .toUpperCase();
+    const product = products.find((p) => p.code === code);
+
+    if (!product) {
+      detail.innerHTML = messageTemplate(
+        "searchCircle",
+        "Producto no encontrado",
+        "No pudimos encontrar este producto. Puede que haya sido removido o que el enlace sea incorrecto.",
+      );
+      relatedSection.hidden = true;
+      return;
+    }
+
+    document.title = `${product.title} | Los Del Sur Accesorios`;
+    byId("breadcrumbProduct").textContent = product.title;
+    detail.innerHTML = detailTemplate(product);
+    setupGallery(product.images);
+
+    const related = products
+      .filter((p) => p.code !== product.code && p.category === product.category)
+      .slice(0, 4);
+    relatedSection.hidden = !related.length;
+    renderProducts(related, byId("relatedProductsGrid"));
+  } catch (err) {
+    console.error("Error al cargar detalle de producto:", err);
+    detail.innerHTML = messageTemplate(
+      "warning",
+      "Error al cargar",
+      "No se pudo cargar la información. Intentá recargar la página.",
+      true,
+    );
+    relatedSection.hidden = true;
+  }
+}
+
+boot();
+</file>
+
+<file path="product.html">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detalle de Producto | Los Del Sur Accesorios</title>
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/variables.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div data-slot="header"></div>
+
+    <main class="product-page">
+      <nav class="product-breadcrumb" aria-label="Navegación de migas">
+        <a href="./index.html">Inicio</a>
+        <a href="./catalogo.html">Catálogo</a>
+        <span id="breadcrumbProduct">Detalle de Producto</span>
+      </nav>
+
+      <section
+        id="productDetail"
+        class="product-detail"
+        aria-live="polite"
+      ></section>
+
+      <section class="related-products" id="relatedSection">
+        <h2 class="related-products__title">También te puede interesar</h2>
+        <div id="relatedProductsGrid" class="grid reveal-item"></div>
+      </section>
+    </main>
+
+    <div data-slot="drawer"></div>
+    <div data-slot="footer"></div>
+
+    <script type="module" src="./assets/js/product.js"></script>
+  </body>
+</html>
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Tu destino premium para accesorios, repuestos y detalles que elevan tu vehículo al siguiente nivel."
+    />
+    <title>Los Del Sur Accesorios</title>
+    <link rel="icon" type="image/png" href="./assets/img/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/img/hero-espejos.jpg"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/variables.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body data-page="home">
+    <div data-slot="header"></div>
+
+    <main>
+      <div data-slot="hero"></div>
+      <div data-slot="features"></div>
+
+      <section class="catalog catalog--home">
+        <div class="catalog__content">
+          <div class="results__bar">
+            <div class="results__bar-left">
+              <h2 class="section-title">Productos destacados</h2>
+            </div>
+            <div data-slot="results-tools"></div>
+          </div>
+          <div id="productsGrid" class="grid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <div data-slot="drawer"></div>
+    <div data-slot="footer"></div>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
+</html>
+</file>
+
+<file path="assets/js/main.js">
+import { initCart, setCatalog } from "./core/cart.js";
+import { FEATURED_PER_CATEGORY } from "./core/config.js";
+import { loadProducts } from "./core/data.js";
+import { fuzzySearch, tokenize } from "./core/search.js";
+import {
+  byId,
+  catalogUrl,
+  categoryLabel,
+  debounce,
+  escapeHtml,
+  restartAnimation,
+} from "./core/utils.js";
+import { mountSlots } from "./ui/components.js";
+import { renderProducts } from "./ui/cards.js";
+import { initHero } from "./ui/hero.js";
+import { initShell } from "./ui/shell.js";
+
+mountSlots();
+
+const IDS = [
+  "q",
+  "searchForm",
+  "resultsCount",
+  "fuzzyBanner",
+  "productsGrid",
+  "pagination",
+  "emptyState",
+  "resultsSection",
+  "filterCategory",
+  "filterBrand",
+  "filterModel",
+  "filterRim",
+  "filterRimGroup",
+  "catalogSidebar",
+  "clearFiltersBtn",
+  "emptyReset",
+  "sortSelect",
+  "viewToggle",
+  "mobileFiltersBtn",
+  "closeFiltersBtn",
+  "mobileFiltersOverlay",
+  "applyFiltersBtn",
+];
+const ui = Object.fromEntries(IDS.map((id) => [id, byId(id)]));
+
+const isCatalog = document.body.dataset.page === "catalog";
+const PAGE_SIZE = 16;
+const RENDER_DELAY_MS = 160;
+
+const state = {
+  products: [],
+  category: "",
+  brand: "",
+  model: "",
+  rim: "",
+  sort: "",
+  page: 1,
+};
+
+const collator = new Intl.Collator("es", { sensitivity: "base" });
+const SORTERS = {
+  "": () => 0,
+  "price-asc": (a, b) => a.price - b.price,
+  "price-desc": (a, b) => b.price - a.price,
+  "name-asc": (a, b) => collator.compare(a.title, b.title),
+  "name-desc": (a, b) => collator.compare(b.title, a.title),
+};
+
+const sortedUnique = (values) =>
+  [...new Set(values.filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
+
+const optionsHtml = (placeholder, values, label = (v) => v) =>
+  `<option value="">${placeholder}</option>` +
+  values
+    .map(
+      (v) =>
+        `<option value="${escapeHtml(v)}">${escapeHtml(label(v))}</option>`,
+    )
+    .join("");
+
+const featuredProducts = (products) =>
+  Object.entries(FEATURED_PER_CATEGORY).flatMap(([category, count]) =>
+    products.filter((p) => p.category === category).slice(0, count),
+  );
+
+const matches = (words) => (p) =>
+  (!state.category || p.category === state.category) &&
+  words.every((word) => p.searchText.includes(word)) &&
+  (!state.brand || p.brands.includes(state.brand)) &&
+  (!state.rim || p.rim === state.rim) &&
+  (!state.model || p.compat.includes(state.model));
+
+// ─── Filtros ─────────────────────────────────────────────────────
+function fillSelects() {
+  ui.filterCategory.innerHTML = optionsHtml(
+    "Todas las categorías",
+    sortedUnique(state.products.map((p) => p.category)),
+    categoryLabel,
+  );
+  ui.filterBrand.innerHTML = optionsHtml(
+    "Todas las marcas",
+    sortedUnique(state.products.flatMap((p) => p.brands)),
+  );
+  ui.filterRim.innerHTML = optionsHtml(
+    "Todos los rodados",
+    sortedUnique(state.products.map((p) => p.rim)),
+  );
+}
+
+function updateModelFilter() {
+  const hasScope = Boolean(state.brand || state.category);
+  const models = hasScope
+    ? sortedUnique(
+        state.products
+          .filter(
+            (p) =>
+              (!state.brand || p.brands.includes(state.brand)) &&
+              (!state.category || p.category === state.category),
+          )
+          .flatMap((p) => p.compat),
+      )
+    : [];
+  const placeholder = !hasScope
+    ? "Seleccione marca o categoría primero"
+    : models.length
+      ? "Todos los modelos"
+      : "Sin modelos disponibles";
+
+  ui.filterModel.innerHTML = optionsHtml(placeholder, models);
+  ui.filterModel.disabled = !models.length;
+  ui.filterModel.value = state.model;
+}
+
+// Refleja `state` en los controles. Es el único punto que escribe valores en el DOM de filtros.
+function syncControls() {
+  const isTazas = state.category === "TAZAS";
+  if (!isTazas) state.rim = "";
+  ui.filterRimGroup.hidden = !isTazas;
+
+  ui.filterCategory.value = state.category;
+  ui.filterBrand.value = state.brand;
+  ui.filterRim.value = state.rim;
+  ui.sortSelect.value = state.sort;
+  updateModelFilter();
+
+  document.querySelectorAll(".nav__link").forEach((link) => {
+    const active = link.dataset.navCategory === state.category;
+    link.classList.toggle("is-active", active);
+    link.setAttribute("aria-current", active ? "page" : "false");
+  });
+}
+
+function setCategory(category) {
+  Object.assign(state, { category, brand: "", model: "", rim: "", page: 1 });
+  syncControls();
+  apply();
+}
+
+function clearFilters() {
+  Object.assign(state, {
+    category: "",
+    brand: "",
+    model: "",
+    rim: "",
+    sort: "",
+    page: 1,
+  });
+  syncControls();
+}
+
+function resetAll() {
+  ui.q.value = "";
+  clearFilters();
+  apply();
+}
+
+const toggleSheet = (open) => {
+  ui.catalogSidebar.classList.toggle("is-open", open);
+  ui.mobileFiltersOverlay.classList.toggle("is-open", open);
+  document.body.classList.toggle("no-scroll", open);
+};
+
+// ─── Render ──────────────────────────────────────────────────────
+const pageButton = (text, page, { active = false, disabled = false } = {}) =>
+  `<button class="pagination__btn${active ? " is-active" : ""}" data-page="${page}"${disabled ? " disabled" : ""}${active ? ' aria-current="page"' : ""}>${text}</button>`;
+
+function renderPagination(totalItems) {
+  const pages = Math.ceil(totalItems / PAGE_SIZE);
+  ui.pagination.innerHTML =
+    pages <= 1
+      ? ""
+      : [
+          pageButton("←", state.page - 1, { disabled: state.page === 1 }),
+          ...Array.from({ length: pages }, (_, i) =>
+            pageButton(i + 1, i + 1, { active: i + 1 === state.page }),
+          ),
+          pageButton("→", state.page + 1, { disabled: state.page === pages }),
+        ].join("");
+}
+
+function updateCatalogStatus(total, isSimilar) {
+  ui.resultsCount.textContent = `${total} producto${total === 1 ? "" : "s"}`;
+  restartAnimation(ui.resultsCount, "is-updated");
+  ui.fuzzyBanner.hidden = !isSimilar;
+  if (isSimilar) {
+    ui.fuzzyBanner.textContent = `No encontramos "${ui.q.value.trim()}". Mostrando resultados similares:`;
+  }
+}
+
+let renderTimer;
+
+function apply() {
+  const words = isCatalog ? tokenize(ui.q.value) : [];
+  const pool = isCatalog ? state.products : featuredProducts(state.products);
+  const results = pool.filter(matches(words)).sort(SORTERS[state.sort]);
+
+  // Sin coincidencias exactas se ofrecen similares (solo catálogo, ignorando filtros).
+  const similar =
+    isCatalog && !results.length && words.length
+      ? fuzzySearch(state.products, words)
+      : [];
+
+  const pages = Math.max(1, Math.ceil(results.length / PAGE_SIZE));
+  if (state.page > pages) state.page = 1;
+  const offset = (state.page - 1) * PAGE_SIZE;
+  const visible = similar.length
+    ? similar
+    : isCatalog
+      ? results.slice(offset, offset + PAGE_SIZE)
+      : results;
+
+  if (isCatalog) updateCatalogStatus(results.length, similar.length > 0);
+
+  clearTimeout(renderTimer);
+  ui.productsGrid.classList.add("is-updating");
+  renderTimer = setTimeout(() => {
+    renderProducts(visible, ui.productsGrid);
+    ui.productsGrid.classList.remove("is-updating");
+    if (!isCatalog) return;
+    renderPagination(results.length);
+    ui.emptyState.hidden = visible.length > 0;
+  }, RENDER_DELAY_MS);
+}
+
+const scrollToResults = () =>
+  ui.resultsSection.scrollIntoView({ behavior: "smooth" });
+
+// ─── Eventos ─────────────────────────────────────────────────────
+function bindCommonControls() {
+  ui.sortSelect.addEventListener("change", () => {
+    state.sort = ui.sortSelect.value;
+    state.page = 1;
+    apply();
+  });
+
+  ui.viewToggle.addEventListener("click", (e) => {
+    const button = e.target.closest("[data-view]");
+    if (!button) return;
+    ui.viewToggle
+      .querySelectorAll("[data-view]")
+      .forEach((b) =>
+        b.classList.toggle("view-toggle__btn--active", b === button),
+      );
+    ui.productsGrid.classList.toggle("is-list", button.dataset.view === "list");
+  });
+}
+
+function initCatalog() {
+  const params = new URLSearchParams(location.search);
+  ui.q.value = params.get("q") ?? "";
+  state.category = (params.get("cat") ?? "").trim().toUpperCase();
+
+  fillSelects();
+  syncControls();
+
+  ui.q.addEventListener(
+    "input",
+    debounce(() => {
+      state.page = 1;
+      apply();
+    }, 200),
+  );
+
+  ui.searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    clearFilters();
+    apply();
+    scrollToResults();
+  });
+
+  ui.filterCategory.addEventListener("change", () => {
+    ui.q.value = "";
+    setCategory(ui.filterCategory.value);
+  });
+
+  [
+    ["filterBrand", "brand"],
+    ["filterModel", "model"],
+    ["filterRim", "rim"],
+  ].forEach(([id, key]) =>
+    ui[id].addEventListener("change", () => {
+      state[key] = ui[id].value;
+      if (key === "brand") state.model = "";
+      state.page = 1;
+      ui.q.value = "";
+      syncControls();
+      apply();
+    }),
+  );
+
+  ui.clearFiltersBtn.addEventListener("click", () => {
+    resetAll();
+    toggleSheet(false);
+  });
+  ui.emptyReset.addEventListener("click", resetAll);
+
+  ui.mobileFiltersBtn.addEventListener("click", () => toggleSheet(true));
+  [ui.closeFiltersBtn, ui.mobileFiltersOverlay, ui.applyFiltersBtn].forEach(
+    (el) => el.addEventListener("click", () => toggleSheet(false)),
+  );
+
+  ui.pagination.addEventListener("click", (e) => {
+    const button = e.target.closest("[data-page]");
+    if (!button || button.disabled) return;
+    state.page = Number(button.dataset.page);
+    apply();
+    scrollToResults();
+  });
+
+  // Navegación por categoría sin recargar; con modificadores se respeta el comportamiento nativo.
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[data-nav-category]");
+    if (!link || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault();
+    const { navCategory } = link.dataset;
+    history.replaceState(null, "", catalogUrl(navCategory));
+    setCategory(navCategory);
+    scrollToResults();
+  });
+}
+
+async function boot() {
+  initShell();
+  initHero();
+  try {
+    state.products = await loadProducts();
+    setCatalog(state.products);
+    initCart();
+    bindCommonControls();
+    if (isCatalog) initCatalog();
+    apply();
+  } catch (err) {
+    console.error("Error al iniciar la app:", err);
+    ui.productsGrid.innerHTML = `<p class="grid-notice">No se pudieron cargar los productos</p>`;
+    if (ui.resultsCount) ui.resultsCount.textContent = "";
+  }
+}
+
+boot();
+</file>
+
+<file path="assets/css/styles.css">
+/* Los Del Sur — estilos de la aplicación. Tokens en variables.css. */
+
+[hidden] {
+  display: none !important;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  overflow-x: hidden;
+}
+
+main {
+  padding-bottom: var(--space-32);
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(26, 95, 212, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* ═══ KEYFRAMES ═══ */
+@keyframes header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes nav-link-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes badge-bump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.55);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.7);
+  }
+}
+@keyframes dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scale-in {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes shimmer {
+  from {
+    background-position: -400px 0;
+  }
+  to {
+    background-position: 400px 0;
+  }
+}
+@keyframes scroll-line {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+@keyframes fly-to-cart {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.6) translate(var(--fly-x), var(--fly-y));
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.15) translate(var(--fly-x), var(--fly-y));
+    opacity: 0;
+  }
+}
+
+/* ═══ HEADER ═══ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: linear-gradient(
+    180deg,
+    var(--navy-600) 0%,
+    var(--navy-700) 50%,
+    var(--navy-800) 100%
+  );
+  animation: header-enter 0.5s var(--ease-snap) both;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06),
+    0 4px 24px rgba(0, 0, 0, 0.28),
+    0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.4s var(--ease-snap);
+  transform: translateZ(0);
+}
+.header.is-scrolled {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04),
+    0 8px 32px rgba(0, 0, 0, 0.36),
+    0 2px 8px rgba(0, 0, 0, 0.22),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+}
+.header__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: 0 var(--content-padding-x);
+  height: var(--header-main-h);
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  transition:
+    opacity 0.2s ease,
+    transform 0.3s var(--ease-snap);
+}
+.brand:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+.brand:active {
+  transform: scale(0.98);
+}
+.brand__logo-wrap {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+.brand__img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+  transition: filter 0.3s ease;
+}
+.brand:hover .brand__img {
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.4));
+}
+.brand__glow {
+  position: absolute;
+  inset: -6px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.22) 0%,
+    transparent 70%
+  );
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.brand:hover .brand__glow {
+  opacity: 1;
+}
+
+/* Searchbar */
+.searchbar {
+  flex: 1;
+  max-width: 620px;
+}
+.searchbar__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-full);
+  padding: 10px 10px 10px 18px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+  transition:
+    background 0.3s var(--ease-snap),
+    border-color 0.3s var(--ease-snap),
+    box-shadow 0.3s var(--ease-snap),
+    transform 0.3s var(--ease-snap);
+}
+.searchbar__inner:focus-within {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(93, 165, 255, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 3px rgba(26, 95, 212, 0.18),
+    0 4px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+.searchbar__icon {
+  display: grid;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s ease;
+}
+.searchbar__inner:focus-within .searchbar__icon {
+  color: var(--blue-300);
+}
+.searchbar__input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.01em;
+}
+.searchbar__input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+  font-weight: var(--font-weight-regular);
+}
+.searchbar__btn {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--brand-600);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    var(--shadow-brand);
+  transition:
+    background 0.2s ease,
+    transform 0.25s var(--ease-snap),
+    box-shadow 0.2s ease;
+}
+.searchbar__btn:hover {
+  background: var(--brand-500);
+  transform: scale(1.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    var(--shadow-brand-lg);
+}
+.searchbar__btn:active {
+  transform: scale(0.95);
+}
+
+/* Acciones */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+.cart-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 16px 8px 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.14);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.01em;
+  transition:
+    background 0.25s var(--ease-snap),
+    border-color 0.25s ease,
+    transform 0.25s var(--ease-snap),
+    box-shadow 0.25s ease;
+}
+.cart-trigger:hover {
+  background: rgba(255, 255, 255, 0.24);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 6px 20px rgba(0, 0, 0, 0.24),
+    0 2px 6px rgba(0, 0, 0, 0.14);
+}
+.cart-trigger:active {
+  transform: scale(0.96);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.14);
+}
+.cart-trigger:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 3px;
+}
+.cart-trigger__icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.cart-trigger__badge {
+  position: absolute;
+  top: -8px;
+  right: -9px;
+  display: grid;
+  place-items: center;
+  min-width: 18px;
+  height: 18px;
+  padding-inline: 4px;
+  border-radius: var(--radius-full);
+  background: var(--brand-500);
+  color: #fff;
+  font-size: 10px;
+  font-weight: var(--font-weight-black);
+  line-height: 1;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.22),
+    0 0 0 1.5px rgba(20, 40, 96, 0.25);
+}
+.cart-trigger__badge.bump {
+  animation: badge-bump 0.4s var(--ease-snap);
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition:
+    background 0.2s ease,
+    transform 0.2s var(--ease-snap);
+}
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+}
+.mobile-menu-btn span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transform-origin: center;
+  transition:
+    transform 0.35s var(--ease-snap),
+    opacity 0.25s ease,
+    width 0.25s ease;
+}
+.mobile-menu-btn.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.mobile-menu-btn.is-open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+.mobile-menu-btn.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Nav */
+.nav {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+}
+.nav::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--brand-700) 20%,
+    var(--brand-500) 50%,
+    var(--brand-700) 80%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+.nav__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--header-nav-h);
+  padding: 0 var(--content-padding-x);
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+}
+.nav__quick-links {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-sm);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  animation: nav-link-in 0.4s var(--ease-snap) both;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+.nav__link:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.nav__link:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.nav__link:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.nav__link:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.nav__link:hover,
+.nav__link.is-active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.nav__link.is-active {
+  font-weight: var(--font-weight-semibold);
+}
+.nav__link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.55);
+  outline-offset: 2px;
+}
+
+/* ═══ HERO ═══ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background: var(--navy-950);
+}
+.hero__slider {
+  position: absolute;
+  inset: 0;
+}
+.hero__slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.9s var(--ease-out);
+}
+.hero__slide--active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 2;
+}
+.hero__media {
+  position: absolute;
+  inset: 0;
+}
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: blur(2px) saturate(0.75) brightness(0.65);
+  transform: scale(1.06);
+  transition: transform 8s var(--ease-smooth);
+}
+.hero__slide--active .hero__img {
+  transform: scale(1.03);
+}
+.hero__media-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      100deg,
+      rgba(5, 8, 22, 0.92) 0%,
+      rgba(5, 8, 22, 0.7) 38%,
+      rgba(5, 8, 22, 0.26) 65%,
+      rgba(5, 8, 22, 0.06) 100%
+    ),
+    linear-gradient(to top, rgba(5, 8, 22, 0.72) 0%, transparent 38%),
+    linear-gradient(135deg, rgba(20, 40, 96, 0.22) 0%, transparent 55%),
+    linear-gradient(225deg, rgba(204, 15, 15, 0.1) 0%, transparent 45%);
+}
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: var(--container-2xl);
+  margin-inline: auto;
+  padding: 0 var(--content-padding-x) 56px;
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.65s var(--ease-out) 0.15s,
+    transform 0.65s var(--ease-out) 0.15s;
+}
+.hero__slide--active .hero__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+.hero__eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--blue-300);
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+.hero__title {
+  max-width: 620px;
+  margin-bottom: var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: #fff;
+}
+.hero__title-em {
+  font-style: normal;
+  background: linear-gradient(
+    135deg,
+    #ff9090 0%,
+    #ff4040 40%,
+    var(--brand-400) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero__text {
+  max-width: 440px;
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-relaxed);
+  color: rgba(255, 255, 255, 0.62);
+}
+.hero__cta-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-snug);
+  transition: all var(--duration-base) var(--ease-out);
+}
+.hero__cta--primary {
+  background: var(--brand-600);
+  color: #fff;
+  box-shadow: var(--shadow-brand);
+}
+.hero__cta--primary:hover {
+  background: var(--brand-500);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-brand-lg);
+}
+.hero__cta--primary:active {
+  transform: scale(0.97);
+}
+.hero__cta--ghost {
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: var(--blur-sm);
+  backdrop-filter: var(--blur-sm);
+}
+.hero__cta--ghost:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+}
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transform: translateY(-50%);
+  -webkit-backdrop-filter: var(--blur-sm);
+  backdrop-filter: var(--blur-sm);
+  transition:
+    background var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-spring);
+}
+.hero__arrow:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.26);
+  transform: translateY(-50%) scale(1.08);
+}
+.hero__arrow--left {
+  left: var(--content-padding-x);
+}
+.hero__arrow--right {
+  right: var(--content-padding-x);
+}
+.hero__progress-bar {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 4;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.07);
+}
+.hero__progress-fill {
+  width: 0;
+  height: 100%;
+  background: var(--brand-500);
+  transition: width 0.1s linear;
+}
+.hero__dots {
+  position: absolute;
+  bottom: var(--space-5);
+  left: 50%;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  transform: translateX(-50%);
+}
+.hero__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.28);
+  transition: all var(--duration-base) var(--ease-spring);
+}
+.hero__dot--active {
+  width: 24px;
+  background: var(--brand-400);
+}
+.hero__scroll-hint {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--content-padding-x);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(255, 255, 255, 0.28);
+  font-size: var(--font-size-2xs);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+}
+.hero__scroll-line {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3));
+  animation: scroll-line 1.8s ease-in-out infinite;
+}
+
+/* ═══ FEATURES ═══ */
+.features-strip {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.features-strip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-mesh);
+  pointer-events: none;
+}
+.features-strip__inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding-inline: var(--content-padding-x);
+}
+.feature-chip {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-8);
+  border-right: 1px solid var(--color-border-subtle);
+  transition: background var(--duration-base) var(--ease-out);
+}
+.feature-chip:last-child {
+  border-right: none;
+}
+.feature-chip:hover {
+  background: var(--color-blue-light);
+}
+.feature-chip__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  color: #fff;
+}
+.feature-chip:nth-child(odd) .feature-chip__icon {
+  background: var(--gradient-brand);
+  box-shadow: var(--shadow-brand);
+}
+.feature-chip:nth-child(even) .feature-chip__icon {
+  background: var(--gradient-navy);
+  box-shadow: var(--shadow-navy);
+}
+.feature-chip__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.feature-chip__text strong {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+.feature-chip__text span {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* ═══ CATALOG ═══ */
+.catalog {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  gap: var(--space-10);
+  align-items: start;
+  max-width: var(--container-2xl);
+  margin: var(--space-12) auto 0;
+  padding: 0 var(--content-padding-x);
+  scroll-margin-top: var(--header-height);
+}
+.catalog.catalog--home {
+  grid-template-columns: 1fr;
+}
+.catalog__sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-4));
+}
+
+.filters-box {
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+.filters-box__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.filters-box__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-snug);
+}
+.filters-box__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.filters-box__clear {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.filters-box__clear:hover {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.filter-group + .filter-group {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.filter-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+.filter-select-wrap {
+  position: relative;
+}
+.filter-select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 14px;
+  height: 14px;
+  transform: translateY(-50%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a90aa' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19.5 8.25l-7.5 7.5-7.5-7.5'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  pointer-events: none;
+}
+.filter-select {
+  width: 100%;
+  padding: 10px 36px 10px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+.filter-select:focus {
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(26, 95, 212, 0.12);
+}
+.filter-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.results__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.results__bar-left {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+.results__bar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+}
+.results__count {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+.results__count.is-updated {
+  animation: rise 0.28s var(--ease-out) both;
+}
+.view-toggle {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+.view-toggle__btn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.view-toggle__btn--active,
+.view-toggle__btn:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-xs);
+}
+
+.grid-notice {
+  grid-column: 1 / -1;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--color-blue);
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--color-blue) 10%, transparent);
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* ═══ GRID & CARDS ═══ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.grid.is-updating {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.grid.is-list {
+  grid-template-columns: 1fr;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--duration-slow) var(--ease-out),
+    box-shadow var(--duration-slow) var(--ease-out),
+    border-color var(--duration-slow) var(--ease-out);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: var(--gradient-card-shine);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-base) var(--ease-out);
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(26, 95, 212, 0.18);
+}
+.card:hover::before {
+  opacity: 1;
+}
+.card__img-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #fff;
+}
+.card__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.card__img img,
+.product-detail__main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+  transition:
+    transform 0.7s var(--ease-smooth),
+    opacity 0.25s ease;
+}
+.card__img img {
+  padding: var(--space-3);
+}
+.card:hover .card__img img {
+  transform: scale(1.07);
+}
+img.is-fading {
+  opacity: 0;
+}
+.card__slider-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--neutral-900);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  backdrop-filter: var(--blur-sm);
+  transition:
+    opacity var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+.card:hover .card__slider-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card__slider-btn:hover {
+  transform: translateY(-50%) scale(1.12);
+}
+.card__slider-btn--prev {
+  left: var(--space-2);
+}
+.card__slider-btn--next {
+  right: var(--space-2);
+}
+.card__slider-dots {
+  position: absolute;
+  bottom: var(--space-3);
+  left: 50%;
+  z-index: 3;
+  display: flex;
+  gap: 5px;
+  transform: translateX(-50%);
+}
+.card__slider-dot {
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.5);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+.card__slider-dot.is-active {
+  width: 14px;
+  background: #fff;
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
+.card__detail-link {
+  display: block;
+  color: inherit;
+}
+.card__title {
+  margin-top: var(--space-1);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-snug);
+}
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  margin-top: auto;
+  padding-top: var(--space-3);
+}
+.price__value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+}
+.card__actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+.btn-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: var(--space-2);
+  padding: 10px var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--color-text);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-snug);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+.btn-card:hover:not(.btn-card--ghost) {
+  background: var(--color-accent);
+  box-shadow: var(--shadow-brand);
+  transform: translateY(-1px);
+}
+.btn-card:active {
+  transform: scale(0.97);
+}
+.btn-card--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+.btn-card--ghost:hover {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border-color: var(--color-border-strong);
+  transform: translateY(-1px);
+}
+.is-added {
+  background: var(--color-success) !important;
+}
+
+.grid.is-list .card {
+  flex-direction: row;
+}
+.grid.is-list .card__img-slider {
+  flex-shrink: 0;
+  width: 160px;
+  height: 160px;
+  aspect-ratio: auto;
+}
+.grid.is-list .card__body {
+  flex: 1;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--space-8) 0;
+  padding: var(--space-24) var(--space-8);
+  text-align: center;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-2xl);
+}
+.empty__icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+}
+.empty__title {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+.empty__text {
+  max-width: 320px;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+.empty__reset {
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-brand);
+  transition:
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+.empty__reset:hover {
+  box-shadow: var(--shadow-brand-lg);
+  transform: translateY(-1px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-16);
+}
+.pagination__btn {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+.pagination__btn:hover:not(:disabled) {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+  background: var(--color-blue-light);
+}
+.pagination__btn.is-active {
+  background: var(--gradient-brand);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: var(--shadow-brand);
+  font-weight: var(--font-weight-bold);
+}
+.pagination__btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ═══ CART DRAWER ═══ */
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-drawer);
+  pointer-events: none;
+}
+.drawer__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 8, 22, 0.58);
+  -webkit-backdrop-filter: var(--blur-sm);
+  backdrop-filter: var(--blur-sm);
+  opacity: 0;
+  transition: opacity var(--duration-slow) var(--ease-out);
+}
+.drawer__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: min(var(--drawer-width), 100vw);
+  height: 100%;
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-2xl);
+  transform: translateX(100%);
+  transition: transform var(--duration-slower) var(--ease-out);
+}
+.drawer.is-open {
+  pointer-events: auto;
+}
+.drawer.is-open .drawer__overlay {
+  opacity: 1;
+}
+.drawer.is-open .drawer__panel {
+  transform: translateX(0);
+}
+.drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.drawer__header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.drawer__header-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.drawer__title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-snug);
+}
+.drawer__subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+.drawer__close {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  color: var(--color-text-secondary);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+.drawer__close:hover {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+  transform: rotate(90deg);
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  overflow-y: auto;
+}
+.cart::-webkit-scrollbar {
+  width: 4px;
+}
+.cart::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+.cart.is-leaving {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+.cart-item:hover {
+  border-color: rgba(26, 95, 212, 0.18);
+  box-shadow: var(--shadow-sm);
+}
+.cart.is-animated .cart-item {
+  animation: rise 0.28s var(--ease-out) both;
+  animation-delay: calc(var(--i) * 50ms);
+}
+.cart-item.is-leaving {
+  opacity: 0;
+  transform: translateX(32px);
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
+}
+.cart-item__img {
+  flex-shrink: 0;
+  width: 76px;
+  height: 76px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-3);
+}
+.cart-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cart-item__top {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.cart-item__name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.3;
+}
+.cart-item__meta {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+.cart-item__unit {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+.cart-item__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-3);
+}
+.qty {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+.qty__btn {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.qty__btn:hover {
+  background: var(--color-accent-light);
+  color: var(--color-accent);
+}
+.qty__value {
+  min-width: 24px;
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+.cart-item__price {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+.cart-item__remove {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.cart-item__remove:hover {
+  background: #fee2e2;
+  color: var(--color-danger);
+}
+
+.cart-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-16) var(--space-8);
+  text-align: center;
+}
+.cart-empty__icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: var(--space-3);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+}
+.cart-empty__text {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+}
+.cart-empty__sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+.cart__clear-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-4);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.cart__clear-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.cart__clear-btn:hover {
+  background: #fee2e2;
+  color: var(--color-danger);
+}
+
+.drawer__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-surface-2);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.totals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.totals__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.totals__label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+.totals__value {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--letter-spacing-tight);
+}
+/* El verde de WhatsApp es identidad de marca de terceros, no forma parte de la paleta. */
+.checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 15px var(--space-6);
+  border-radius: var(--radius-lg);
+  background: #25d366;
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-snug);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  transition:
+    filter var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+.checkout-btn:hover:not(:disabled) {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.42);
+}
+.checkout-btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+.checkout-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ═══ FLY TO CART ═══ */
+.fly-item {
+  position: fixed;
+  z-index: var(--z-toast);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-brand);
+  box-shadow: var(--shadow-brand);
+  pointer-events: none;
+}
+.fly-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fly-item.is-flying {
+  display: flex;
+  animation: fly-to-cart 0.7s var(--ease-in-out) forwards;
+}
+
+/* ═══ REVEAL ═══ */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--duration-slow) var(--ease-out),
+    transform var(--duration-slow) var(--ease-out);
+}
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-item:nth-child(2) {
+  transition-delay: 80ms;
+}
+.reveal-item:nth-child(3) {
+  transition-delay: 160ms;
+}
+.reveal-item:nth-child(4) {
+  transition-delay: 240ms;
+}
+.reveal-item:nth-child(5) {
+  transition-delay: 320ms;
+}
+.reveal-item:nth-child(6) {
+  transition-delay: 400ms;
+}
+
+/* ═══ PRODUCT PAGE ═══ */
+.product-page {
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding: var(--space-8) var(--content-padding-x) var(--space-24);
+}
+.product-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+.product-breadcrumb a {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+.product-breadcrumb a:hover {
+  color: var(--color-blue);
+}
+.product-breadcrumb > * + *::before {
+  content: "›";
+  margin-right: var(--space-2);
+  color: var(--color-border-strong);
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+.product-detail__gallery,
+.product-detail__info > * {
+  animation: rise 0.5s var(--ease-out) both;
+}
+.product-detail__info > * {
+  animation-delay: 0.16s;
+}
+.product-detail__info > :nth-child(2) {
+  animation-delay: 0.22s;
+}
+.product-detail__info > :nth-child(3) {
+  animation-delay: 0.28s;
+}
+.product-detail__info > :nth-child(4) {
+  animation-delay: 0.34s;
+}
+.product-detail__info > :nth-child(5) {
+  animation-delay: 0.4s;
+}
+.product-detail__info > :nth-child(6) {
+  animation-delay: 0.46s;
+}
+.product-detail__info > :nth-child(7) {
+  animation-delay: 0.52s;
+}
+
+.product-detail__gallery {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-6));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.product-detail__main-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-2xl);
+  background: #fff;
+  cursor: zoom-in;
+}
+.product-detail__main-image {
+  padding: var(--space-4);
+}
+.product-detail__main-image-wrap:hover .product-detail__main-image {
+  transform: scale(1.04);
+}
+.product-detail__arrow {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--neutral-900);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-50%);
+  -webkit-backdrop-filter: var(--blur-sm);
+  backdrop-filter: var(--blur-sm);
+  transition:
+    transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+.product-detail__arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+.product-detail__arrow--prev {
+  left: var(--space-4);
+}
+.product-detail__arrow--next {
+  right: var(--space-4);
+}
+.product-detail__zoom-hint {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  backdrop-filter: var(--blur-sm);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-base);
+}
+.product-detail__main-image-wrap:hover .product-detail__zoom-hint {
+  opacity: 1;
+}
+.product-detail__thumbs {
+  display: flex;
+  gap: var(--space-3);
+  padding-bottom: var(--space-1);
+  overflow-x: auto;
+}
+.product-detail__thumbs::-webkit-scrollbar {
+  height: 3px;
+}
+.product-detail__thumbs::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+.product-detail__thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  background: #fff;
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+.product-detail__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-detail__thumb:hover {
+  border-color: var(--color-blue);
+}
+.product-detail__thumb.is-active {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(204, 15, 15, 0.15);
+}
+
+.product-detail__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-top: var(--space-4);
+}
+.product-detail__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--font-size-2xl), 3vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-snug);
+  letter-spacing: var(--letter-spacing-tight);
+}
+.product-detail__info .badges {
+  margin-top: var(--space-1);
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+.badge {
+  padding: 3px 8px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-3);
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+.product-detail__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+}
+.product-detail__price-main {
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--letter-spacing-tight);
+}
+.product-detail__description {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border-subtle);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-secondary);
+}
+.product-detail__meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+.product-detail__meta-item {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+}
+.product-detail__meta-label {
+  margin-bottom: 4px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.product-detail__meta-value {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+.product-detail__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+.trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 5px 10px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+.product-detail__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+}
+.product-detail__add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: 16px var(--space-6);
+  border-radius: var(--radius-lg);
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  box-shadow: var(--shadow-brand);
+  transition:
+    box-shadow var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-spring);
+}
+.product-detail__add:hover {
+  box-shadow: var(--shadow-brand-lg);
+  transform: translateY(-2px);
+}
+.product-detail__add:active {
+  transform: scale(0.98);
+}
+.product-detail__wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 14px var(--space-6);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+.product-detail__wa:hover {
+  border-color: #25d366;
+  background: #f0fdf4;
+  color: #16a34a;
+}
+.related-products {
+  margin-top: var(--space-24);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--color-border-subtle);
+}
+.related-products__title {
+  margin-bottom: var(--space-8);
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Skeleton de carga */
+.skeleton {
+  border-radius: var(--radius-md);
+  background: linear-gradient(
+    90deg,
+    var(--neutral-150) 25%,
+    var(--neutral-100) 50%,
+    var(--neutral-150) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+.skeleton--main {
+  width: 100%;
+  aspect-ratio: 4 / 4.5;
+  border-radius: var(--radius-2xl);
+}
+.skeleton-thumbs {
+  display: flex;
+  gap: var(--space-3);
+}
+.skeleton--thumb {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+}
+.skeleton--badge-row {
+  width: 40%;
+  height: 24px;
+  margin-bottom: var(--space-5);
+}
+.skeleton--title {
+  width: 90%;
+  height: 42px;
+}
+.skeleton--title-short {
+  width: 65%;
+  margin-top: 10px;
+}
+.skeleton--price {
+  width: 50%;
+  height: 56px;
+  margin-top: var(--space-5);
+  border-radius: var(--radius-lg);
+}
+.skeleton--meta {
+  width: 100%;
+  height: 80px;
+  margin-top: var(--space-4);
+}
+.skeleton--btn {
+  width: 100%;
+  height: 54px;
+  margin-top: var(--space-6);
+  border-radius: var(--radius-lg);
+}
+
+/* Producto no encontrado / error */
+.product-not-found {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-24) var(--space-8);
+  text-align: center;
+}
+.product-not-found__icon {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+}
+.product-not-found__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+.product-not-found__text {
+  max-width: 360px;
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+}
+.product-not-found__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 12px 28px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-brand);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-brand);
+  transition:
+    box-shadow var(--duration-fast),
+    transform var(--duration-fast) var(--ease-spring);
+}
+.product-not-found__btn:hover {
+  box-shadow: var(--shadow-brand-lg);
+  transform: translateY(-2px);
+}
+.product-not-found .is-error {
+  color: var(--color-danger);
+}
+
+/* Zoom de imagen */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-cursor);
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  cursor: zoom-out;
+  animation: fade-in 0.2s ease;
+}
+.lightbox.is-closing {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+  animation: scale-in 0.25s var(--ease-snap);
+}
+
+/* ═══ FOOTER ═══ */
+.footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--space-24);
+  background: var(--gradient-footer);
+  color: var(--neutral-300);
+}
+.footer__glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--brand-600),
+    var(--blue-500),
+    var(--brand-600),
+    transparent
+  );
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-16);
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding: var(--space-16) var(--content-padding-x) var(--space-12);
+}
+.footer__logo-wrap {
+  display: inline-flex;
+  margin-bottom: var(--space-4);
+}
+.footer__logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(2);
+  opacity: 0.85;
+}
+.footer__brand-desc {
+  max-width: 280px;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--neutral-500);
+}
+.footer__wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px 20px;
+  border: 1px solid rgba(37, 211, 102, 0.25);
+  border-radius: var(--radius-full);
+  background: rgba(37, 211, 102, 0.12);
+  color: #4ade80;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+.footer__wa-btn:hover {
+  background: rgba(37, 211, 102, 0.2);
+  border-color: rgba(37, 211, 102, 0.4);
+}
+.footer__col-title {
+  margin-bottom: var(--space-5);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-widest);
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--neutral-500);
+  cursor: pointer;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+.footer__link:hover {
+  color: #fff;
+}
+.footer__link--static {
+  color: var(--neutral-600);
+  cursor: default;
+}
+.footer__link--static:hover {
+  color: var(--neutral-500);
+}
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  max-width: var(--container-xl);
+  margin-inline: auto;
+  padding: var(--space-5) var(--content-padding-x);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: var(--font-size-xs);
+  color: var(--neutral-600);
+}
+
+/* Controles exclusivos de móvil: ocultos por defecto */
+.mobile-filters-btn,
+.mobile-filters-close,
+.mobile-filters-overlay,
+.mobile-filters-sheet__handle,
+.mobile-filters-footer {
+  display: none;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 1100px) {
+  .catalog {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+  .footer__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .features-strip__inner {
+    flex-wrap: wrap;
+  }
+  .feature-chip {
+    flex: 1 1 calc(50% - 1px);
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  .feature-chip:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-filters-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    padding: 8px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+  .mobile-filters-btn:hover {
+    background: var(--color-blue-light);
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+    transform: translateY(-1px);
+  }
+  .mobile-filters-btn:active {
+    transform: scale(0.97);
+  }
+
+  .mobile-filters-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: rgba(5, 8, 22, 0.52);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .mobile-filters-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .catalog__sidebar {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+    border-radius: 24px 24px 0 0;
+    background: var(--color-surface);
+    box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease-snap);
+  }
+  .catalog__sidebar.is-open {
+    transform: translateY(0);
+  }
+  .mobile-filters-sheet__handle {
+    display: block;
+    flex-shrink: 0;
+    width: 40px;
+    height: 4px;
+    margin: 16px auto 8px;
+    border-radius: 10px;
+    background: var(--blue-300);
+  }
+  .filters-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: var(--space-6);
+    padding: 0 var(--space-5) var(--space-6);
+    overflow-y: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .filter-group + .filter-group {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .mobile-filters-close {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    background: var(--color-surface-2);
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+  .mobile-filters-close:hover {
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    transform: rotate(90deg);
+  }
+  .mobile-filters-footer {
+    display: block;
+    flex-shrink: 0;
+    padding: 16px 24px 24px;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border-subtle);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .mobile-filters-apply {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 14px;
+    border-radius: var(--radius-full);
+    background: var(--gradient-brand);
+    color: #fff;
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    box-shadow: var(--shadow-brand);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .mobile-filters-apply:active {
+    transform: scale(0.98);
+  }
+  body.no-scroll {
+    overflow: hidden;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .product-detail__gallery {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-main-h: 100px;
+    --header-height: 100px;
+  }
+  main {
+    padding-bottom: var(--space-16);
+  }
+
+  /* Header */
+  .header__main {
+    gap: 8px;
+    padding: 0 var(--space-3);
+  }
+  .brand {
+    order: 1;
+  }
+  .brand:hover {
+    transform: none;
+  }
+  .brand__logo-wrap {
+    width: 150px;
+    height: 150px;
+  }
+  .searchbar {
+    order: 2;
+    min-width: 0;
+  }
+  .searchbar__inner {
+    padding: 4px 4px 4px 12px;
+  }
+  .searchbar__btn {
+    width: 32px;
+    height: 32px;
+  }
+  .searchbar__input {
+    font-size: 13px;
+  }
+  .header__actions {
+    order: 3;
+    gap: 6px;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    order: 2;
+    width: 36px;
+    height: 36px;
+  }
+  .cart-trigger {
+    order: 1;
+    justify-content: center;
+    height: 36px;
+    padding: 6px 8px;
+  }
+  .cart-trigger__label {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+  .nav.is-mobile-open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: var(--z-overlay);
+    padding: var(--space-4);
+    background: linear-gradient(
+      180deg,
+      var(--navy-700) 0%,
+      var(--navy-800) 100%
+    );
+    border-top: 2px solid var(--brand-600);
+    box-shadow:
+      0 16px 40px rgba(0, 0, 0, 0.32),
+      0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: dropdown-in 0.3s var(--ease-snap) both;
+  }
+  .nav.is-mobile-open .nav__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    height: auto;
+    padding: 0;
+  }
+  .nav.is-mobile-open .nav__quick-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  .nav.is-mobile-open .nav__link {
+    justify-content: flex-start;
+    width: 100%;
+    height: 44px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 360px;
+  }
+  .hero__scroll-hint {
+    display: none;
+  }
+  .hero__arrow {
+    width: 36px;
+    height: 36px;
+  }
+  .hero__arrow--left {
+    left: var(--space-3);
+  }
+  .hero__arrow--right {
+    right: var(--space-3);
+  }
+  .hero__content {
+    padding: 0 var(--space-5) 56px;
+  }
+
+  /* Features: carrusel horizontal */
+  .features-strip__inner {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 0 var(--space-4) 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .features-strip__inner::-webkit-scrollbar {
+    display: none;
+  }
+  .feature-chip {
+    flex: 0 0 85%;
+    min-width: 260px;
+    padding: var(--space-4) var(--space-5);
+    border: none;
+    border-radius: var(--radius-xl);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-sm);
+    scroll-snap-align: start;
+  }
+
+  /* Catálogo */
+  .catalog {
+    margin-top: var(--space-6);
+    padding: 0 var(--space-4);
+  }
+  .results__bar {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  .card__body {
+    gap: var(--space-1);
+    padding: var(--space-3);
+  }
+  .card__title {
+    font-size: var(--font-size-sm);
+  }
+  .price__value {
+    font-size: var(--font-size-base);
+  }
+  .card__actions {
+    gap: var(--space-1);
+  }
+  .btn-card {
+    gap: 4px;
+    padding: 8px var(--space-2);
+    font-size: var(--font-size-xs);
+  }
+
+  /* Producto */
+  .product-page {
+    padding: var(--space-4) var(--space-4) var(--space-16);
+  }
+  .product-breadcrumb {
+    margin-bottom: var(--space-4);
+    font-size: var(--font-size-xs);
+  }
+  .product-detail__title {
+    font-size: clamp(var(--font-size-xl), 5vw, var(--font-size-3xl));
+  }
+  .product-detail__price-main {
+    font-size: var(--font-size-2xl);
+  }
+  .product-detail__add {
+    padding: 14px var(--space-4);
+    font-size: var(--font-size-sm);
+  }
+  .product-detail__thumb {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Footer y drawer */
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    padding: var(--space-10) var(--space-5) var(--space-8);
+  }
+  .footer__brand {
+    grid-column: auto;
+  }
+  .footer__bottom {
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-4) var(--space-5);
+    text-align: center;
+  }
+  .drawer__panel {
+    width: 100vw;
+  }
+  .cart {
+    padding: var(--space-4);
+  }
+  .drawer__footer {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 320px;
+  }
+  .hero__title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+  .hero__text,
+  .hero__eyebrow,
+  .badges {
+    display: none;
+  }
+  .hero__cta-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  .hero__cta {
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: var(--font-size-xs);
+  }
+
+  .card__body {
+    padding: var(--space-2);
+  }
+  .card__title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: var(--font-size-xs);
+  }
+  .price__value {
+    font-size: var(--font-size-sm);
+  }
+  .btn-card {
+    flex: 0 0 auto;
+    padding: 8px;
+  }
+  .btn-card svg {
+    flex-shrink: 0;
+  }
+  .card__actions .btn-card:not(:first-child) {
+    flex: 1;
+  }
+
+  .product-detail__meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-detail__thumb {
+    width: 52px;
+    height: 52px;
+  }
+  .footer__col:last-child {
+    display: none;
+  }
+}
+</file>
+
+</files>

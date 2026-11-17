@@ -1,7 +1,7 @@
 export const CONTACT = {
-  whatsapp: "5491131898284",
-  phoneLabel: "+54 11 3189 8284",
-  email: "ventas@rsaccesorios.com",
+  whatsapp: "5491131311542",
+  phoneLabel: "+54 11 3131 1542",
+  email: "lossdelsurr1@gmail.com",
   location: "Buenos Aires, Argentina",
 };
 
